@@ -1,0 +1,105 @@
+>>>> # Fibonacci series:
+>>> ... # the sum of two elements defines the next
+Ellipsis
+>>> ... a, b = 0, 1
+  File "<stdin>", line 1
+    ... a, b = 0, 1
+        ^
+SyntaxError: invalid syntax
+>>> # Fibonacci series:
+>>>
+>>> while a < 10:
+... print(a)
+  File "<stdin>", line 2
+    print(a)
+    ^
+IndentationError: expected an indented block after 'while' statement on line 1
+>>>  while a < 10:
+  File "<stdin>", line 1
+    while a < 10:
+IndentationError: unexpected indent
+>>> # Fibonacci series:
+>>> ... # the sum of two elements defines the next
+Ellipsis
+>>> ... a, b = 0, 1
+  File "<stdin>", line 1
+    ... a, b = 0, 1
+        ^
+SyntaxError: invalid syntax
+>>>  while a < 10:
+  File "<stdin>", line 1
+    while a < 10:
+IndentationError: unexpected indent
+>>>  while a < 10:
+  File "<stdin>", line 1
+    while a < 10:
+IndentationError: unexpected indent
+>>> # Fibonacci series:
+>>> # the sum of two elements defines the next
+>>> a, b = 0, 1
+>>> while a < 10:
+... print(a)
+  File "<stdin>", line 2
+    print(a)
+    ^
+IndentationError: expected an indented block after 'while' statement on line 1
+>>> a, b = b, a+b
+>>> ...
+Ellipsis
+>>> 0
+0
+>>> 1
+1
+>>> 1
+1
+>>> 2
+2
+>>> 3
+3
+>>> 5
+5
+>>> 8
+8
+>>> # Fibonacci series:
+>>> # the sum of two elements defines the next
+>>> a, b = 0, 1
+>>> while a < 10:
+...     print(a)
+...      a, b = b, a+b
+  File "<stdin>", line 3
+    a, b = b, a+b
+IndentationError: unexpected indent
+>>> while a < 10:
+...      print(a)
+...     a, b = b, a+b
+  File "<stdin>", line 3
+    a, b = b, a+b
+                 ^
+IndentationError: unindent does not match any outer indentation level
+>>> while a < 10:
+...     print(a)
+...     a, b = b, a+b
+...
+0
+1
+1
+2
+3
+5
+8
+>>> i = 256*256
+>>> print('The value of i is', i)
+The value of i is 65536
+>>> a, b = 0, 1
+>>>  while a < 1000:
+  File "<stdin>", line 1
+    while a < 1000:
+IndentationError: unexpected indent
+>>> a, b = 0, 1
+>>> while a < 1000:
+...     print(a, end=',')
+...     a, b = b, a+b
+...
+0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,>>>
+>>>
+

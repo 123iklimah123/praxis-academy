@@ -1,0 +1,8 @@
+>>> # this is the first command
+>>> # this is the first commant
+>>> spam = 1 # andthis is the second comment
+>>> text = "# this is not a comment because it's inside quotes."
+>>> print(spam)
+1
+>>> print(text)
+# this is not a comment because it's inside quotes.
