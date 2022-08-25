@@ -10,7 +10,6 @@ def fib(n):
     fib(2000)
 
 fib
-<function fib at 10042ed0>
 f = fib
 f(100)
 
@@ -28,6 +27,5 @@ def fib2(n):
 
 f100 = fib2(100)
 f100
-
 
 
