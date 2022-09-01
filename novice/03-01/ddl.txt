@@ -1,0 +1,18 @@
+Dalam konteks SQL , definisi data atau bahasa deskripsi data ( DDL ) adalah sintaks untuk membuat dan memodifikasi objek database seperti tabel, indeks, dan pengguna. Pernyataan DDL mirip dengan bahasa pemrograman komputer untuk mendefinisikan struktur data, terutama skema database. 
+Pengertian lebih lengkap dari DDL adalah salah satu bentuk SQL yang bisa digunakan untuk menciptakan atau membuat database, tabel, struktur tabel, merubah struktur database, menghapus tabel, menghapus database serta membuat relasi antar tabel. 
+Contoh umum perintah dasar DDL adl CREATE, ALTER, dan DROP.
+
+create = Perintah create digunakan untuk membuat database, tabel, indeks, atau prosedur tersimpan baru. contoh:
+1. Create trigger untuk membuat reaksi tertentu atau trigger pada database saat Anda memasukkan perintah lain
+2. Create table untuk membuat tabel yang baru
+3. Create Procedure untuk membuat prosedur yang baru
+4. Create index untuk membuat index yang baru
+5. Create function untuk membuat fungsi yang baru
+6. Create database untuk membuat database yang baru
+
+DROP = menghancurkan database, tabel, indeks, atau tampilan yang ada.
+Pernyataan DROP berbeda dari pernyataan DELETE dan TRUNCATE , karena DELETE dan TRUNCATE tidak menghapus tabel itu sendiri. Misalnya, pernyataan DELETE mungkin menghapus beberapa (atau semua) data dari tabel sementara meninggalkan tabel itu sendiri dalam database, sedangkan pernyataan DROP menghapus seluruh tabel dari database.
+
+ALTER = Pernyataan ALTER memodifikasi objek database yang ada.
+
+TRUNCATE = Pernyataan TRUNCATE digunakan untuk menghapus semua data dari tabel. Ini jauh lebih cepat daripada DELETE .

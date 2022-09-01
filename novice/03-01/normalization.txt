@@ -1,0 +1,3 @@
+Normalisasi basis data adalah proses penataan basis data relasional sesuai dengan serangkaian yang disebut bentuk normal untuk mengurangi redundansi data dan meningkatkan integritas data . Ini pertama kali diusulkan oleh Edgar F. Codd sebagai bagian dari model relasionalnya .
+
+Normalisasi memerlukan pengorganisasian kolom (atribut) dan tabel (relasi) dari database untuk memastikan bahwa ketergantungan mereka ditegakkan dengan benar oleh batasan integritas database. Hal ini dicapai dengan menerapkan beberapa aturan formal baik dengan proses sintesis (membuat desain database baru) atau dekomposisi (meningkatkan desain database yang sudah ada).

@@ -1,0 +1,5 @@
+Data Query Language ( DQL ) adalah bagian dari pengelompokan dasar sub-bahasa SQL . Sub-bahasa ini terutama dikategorikan ke dalam empat kategori: query language (DQL), a data definition language (DDL), a data control language (DCL), and a data manipulation language (DML).
+
+Pernyataan DQL digunakan untuk melakukan kueri pada data dalam objek skema. Tujuan dari perintah DQL adalah untuk mendapatkan hubungan skema berdasarkan kueri yang diteruskan ke sana.
+
+Meskipun sering dianggap sebagai bagian dari DML, pernyataan SQL SELECT secara tegas merupakan contoh DQL. Saat menambahkan manipulator data FROM atau WHERE ke pernyataan SELECT, pernyataan tersebut kemudian dianggap sebagai bagian dari DML.

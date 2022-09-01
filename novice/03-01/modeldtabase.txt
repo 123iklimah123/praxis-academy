@@ -1,0 +1,39 @@
+Sebuah model database adalah jenis model data yang menentukan struktur logis dari database . Ini pada dasarnya menentukan cara data dapat disimpan, diatur, dan dimanipulasi. 
+
+Model database adalah suatu konsep yang terintegrasi dalam menggambarkan
+hubungan (relationships) antar data dan batasan-batasan (constraint) data dalam suatu sistem database. Model data yang paling umum, berdasarkan pada bagaimana hubungan antar record dalam database (Record Based Data Models), terdapat tiga jenis, yaitu :
+a. Model Database Hirarki (Hierarchical Database Model)
+b. Model Database Jaringan (Network Database Model)
+c. Model Database Relasi (Relational Database Model)
+Contoh paling populer dari model database adalah model relasional, yang menggunakan format berbasis tabel.
+
+1. Model Database Hirarki (Hierarchical Database Model)
+Model database hirarki disebut juga model pohon, karena hubungan antar simpul digambarkan seperti struktur pohon (tree-structured) yang dibalik dengan pola hubungan orang tua – anak (parent – child). Simpul yang paling atas disebut akar (root) dan paling bawah disebut daun. Setiap simpul digambarkan dengan lingkaran atau kotak. Simpul yang berada di atas simpul lainnya disebut orang tua, sedangkan yang berada di bawahnya di sebut anak, dimana seorang orang tua bisa mempunyai satu anak (jenis hubungan satu ke satu, one to one) atau mempunya beberapa anak (jenis hubungan satu ke banyak, one to many). Tapi satu anak hanya boleh punya satu orang tua (jenis
+hubungan satu ke satu, one to one)
+
+Kelemahan utama dari model database hirarki adalah ketidakmampuannya dalam mengelola hubungan banyak ke banyak (many to many), sehingga apabila ada jenis hubungan ini pada model database, maka banyaknya redundansi database tidak dapat terelakkan lagi.
+
+Misalnya pada contoh diatas, mahasiswa merupakan anak dari simpul matakuliah, dengan pilihan ini, maka mahasiswa yang sedang cuti (istirahat kuliah) menjadi tidak tertangani, karena yang disimpan hanyalah data mahasiswa (anak) yang mengambil matakuliah (orang tua), akibatnya ada data yang hilang.
+
+Keunggulan model database ini terletak pada keteraturan struktur yang ditunjukkannya dan hanya sangat cocok untuk sistem yang keterkaitan atau hubungan antara recordnya mengikuti struktur hirarki.
+Karena keterbatasan pemakaiannya dan adanya kelemahan yang cukup mendasar, penggunaan model database ini dalam pengelolaan sistem database sudah ditinggalkan.
+
+2. Model Database Jaringan (Network Database Model)
+Model database jaringan merupakan pengembangan dari model database hirarki, dimana kelemahan yang ada pada model database hirarki yaitu ketidakmampuannya dalam mengelola hubungan banyak ke banyak (Many to Many) telah dapat diatasi dengan model database jaringan ini.
+
+Dalam model ini, data di representasikan sebagai koleksi record dan hubungan antar record direpresentasikan sebagai pointer.
+
+Oleh karena itu, model database jaringan mampu menyatakan hubungan :
+– Satu ke Satu (One To One, 1 : 1), satu orang tua punya satu anak.
+– Satu ke Banyak (One To Many, 1 : M) Satu orang tua punya beberapa anak,
+– Banyak ke Banyak (Many To Many, N : M), beberapa anak punya beberapa orang tua.
+
+Kelemahan dalam model database ini adalah lebih kompleks dan sulitnya dalam proses query, begitu juga halnya dalam manipulasi data yang harus dilaksanakan dengan menelusuri data pointer pada setiap recordnya.
+Kelebihan model database ini adalah dari segi efisiensi penyimpanan data, karena tidak adanya data yang duplikat (redundansi) dan akses yang cepat karena langsung memanfaatkan pointer ke alamat fisik data.
+Karena kompleksitas yang tinggi, apalagi diterapkan pada sistem database yang begitu kompleks, maka model database ini tidak tepat lagi untuk digunakan.
+
+Saat ini, model database jaringan sudah jarang sekali dipakai, kecuali untuk keperluan penelitian (research) saja.
+
+3. Model Database Relasi (Relational Database Model)
+Model database relasi merupakan model database yang paling banyak digunakan saat ini, karena paling sederhana dan mudah digunakan serta yang paling penting adalah kemampuannya dalam mengakomodasi berbagai kebutuhan pengelolaan database.
+Sebuah database dalam model ini disusun dalam bentuk tabel dua dimensi yang terdiri dari baris (record) dan kolom (field), pertemuan antara baris dengan kolom disebut item data (data value), tabel-tabel yang ada dihubungkan (relationship) sedemikian rupa menggunakan field-field kunci (key field) sehingga dapat meminimalkan duplikasi data.

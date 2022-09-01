@@ -1,0 +1,43 @@
+Mempersiapkan dan Menginstal
+Anda akan memerlukan akses ke Server MariaDB. Kami merekomendasikan salah satu dari dua metode ini:
+1. Unduh MariaDB Server di perangkat keras Anda sendiri. Lihat Panduan Penerapan kami untuk petunjuk langkah demi langkah dalam dokumentasi kami.
+
+ATAU
+
+2. Terapkan Platform MariaDB, yang mencakup MariaDB Enterprise Server, menggunakan MariaDB SkySQL. Lihat dokumentasi kami untuk meluncurkan layanan database dalam hitungan menit.
+
+Jika Anda ingin mencoba integrasi Python dengan MariaDB tetapi Anda tidak memiliki database untuk dimainkan, Anda dapat menggunakan database contoh karyawan yang populer .
+
+MariaDB menyediakan dukungan Python melalui MariaDB Connector/Python, yang tersedia melalui Python Package Index.
+
+Menghubungkan ke Server MariaDB
+1. Untuk terhubung ke MariaDB Server menggunakan MariaDB Connector/Python, Anda harus mengimpornya terlebih dahulu, sama seperti modul lainnya:import mariadb
+
+2. Selanjutnya, buat koneksi database dengan fungsi connect(). Fungsi ini mengambil serangkaian argumen bernama yang menentukan kredensial klien Anda, seperti nama pengguna, host, kata sandi. Jika Anda menggunakan instans database di SkySQL, informasi ini disediakan di halaman Detail Layanan untuk instans database Anda.
+
+Koneksi memberi Anda antarmuka untuk mengonfigurasi koneksi aplikasi Anda ke Server MariaDB.
+
+3. Terakhir, panggil cursor()metode pada koneksi untuk mengambil kursor.
+
+Kursor memberi Anda antarmuka untuk berinteraksi dengan Server, seperti menjalankan kueri SQL dan mengelola transaksi.
+
+Mengambil Data
+Setelah Anda memiliki kode awal di tempat Anda dapat mulai bekerja dengan data. Hal pertama yang harus Anda lakukan adalah mencoba mengambil informasi dari database
+
+Menambahkan Data
+Menggunakan execute()metode yang sama dengan INSERTpernyataan, Anda dapat menambahkan baris ke tabel.
+
+Setelah ini selesai, Anda dapat melakukan dan mengembalikan transaksi menggunakan metode commit()and rollback(). Server MariaDB memungkinkan Anda untuk menjalankan beberapa transaksi bersamaan pada tabel yang sama tanpa menguncinya saat Anda menggunakan mesin penyimpanan InnoDB.
+
+Saat menyisipkan baris, Anda mungkin ingin menemukan Kunci Utama dari baris yang terakhir disisipkan saat dibuat, seperti halnya nilai yang bertambah secara otomatis. Anda dapat mengambil ini menggunakan lastrowid()metode pada kursor.
+
+Memperbarui dan menghapus baris dilakukan dengan cara yang sama seperti menyisipkannya. Satu-satunya perbedaan adalah pada kueri yang digunakan.
+
+Menangkap Pengecualian
+Untuk setiap tindakan SQL Anda (meminta, memperbarui, menghapus, atau menyisipkan catatan), Anda harus mencoba untuk menjebak kesalahan, sehingga Anda dapat memverifikasi bahwa tindakan Anda sedang dijalankan seperti yang diharapkan dan Anda tahu tentang masalah apa pun yang terjadi.
+
+Jika kueri dalam tryklausa kode di atas gagal, Server MariaDB mengembalikan pengecualian SQL, yang ditangkap dalam pengecualian dan dicetak ke stdout. Praktik terbaik pemrograman untuk menangkap pengecualian ini sangat penting saat Anda bekerja dengan database, karena Anda perlu memastikan integritas informasi.
+
+Setelah Anda selesai bekerja dengan database, pastikan Anda menutup koneksi ini untuk menghindari koneksi yang tidak digunakan tetap terbuka dan dengan demikian membuang-buang sumber daya
+
+Footer

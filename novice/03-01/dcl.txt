@@ -1,0 +1,23 @@
+Bahasa kontrol data ( DCL ) adalah sintaks yang mirip dengan bahasa pemrograman komputer yang digunakan untuk mengontrol akses ke data yang disimpan dalam database (otorisasi ). Secara khusus, ini adalah komponen dari Structured Query Language (SQL). Bahasa Kontrol Data adalah salah satu kelompok logis dalam Perintah SQL.
+
+salah satu dari kelompok perintah SQL yang digunakan untuk melakukan kontrol terhadap privilege atau hak akses khusus untuk berinteraksi dengan database. Hak akses khusus ini diperlukan sebagai prasyarat bagi setiap user database untuk melakukan berbagai aksi di database, seperti: membuat object, menghapus object, mengubah object, menampilkan hasil query, dan seterusnya.
+
+Sederhananya, setiap pengguna database hanya dapat melakukan aksi-aksi yang sudah diberikan oleh user dengan kontrol tertinggi di dalam database tersebut. Misalnya, pengguna A hanya diberikan akses untuk membuat dan menampilkan sesuatu di database. Maka, pengguna tersebut hanya dapat melakukan perintah tersebut saja, tidak bisa melakukan ubah data, hapus data, dan seterusnya. Hal ini menjadi penting untuk diketahui karena di dalam dunia kerja dengan banyak pengguna database, manajemen pembagian hak akses seperti ini sangat krusial dan berpengaruh terhadap integritas dan keamanan data.
+
+Contoh perintah DCL meliputi:
+GRANT untuk mengizinkan pengguna tertentu melakukan tugas tertentu.
+REVOKE untuk menghapus aksesibilitas pengguna ke objek database.
+
+Perintah DCL adalah:
+GRANT Kami dapat memberikan izin tertentu untuk tabel (dan objek lain) untuk grup/pengguna database tertentu.
+DENY melarang izin tertentu dari grup/pengguna.
+REVOKE perintah ini menghilangkan izin dari grup/pengguna.
+Misalnya: GRANT dapat digunakan untuk memberikan hak istimewa kepada pengguna untuk melakukan SELECT, INSERT, UPDATE dan DELETE pada tabel tertentu atau beberapa tabel.
+
+Perintah REVOKE digunakan untuk mengambil kembali hak istimewa (default) atau mencabut perintah tertentu seperti UPDATE atau DELETE berdasarkan persyaratan.
+
+GRANT dalam kasus pertama kami memberikan hak istimewa kepada pengguna User1 untuk melakukan SELECT, INSERT, UPDATE dan DELETE pada tabel yang disebut karyawan.
+
+REVOKE dengan perintah ini kita dapat mengambil kembali privilege ke default, dalam hal ini kita mengambil kembali perintah INSERT pada tabel employee untuk user User1.
+
+DENY adalah perintah khusus. Kami dapat menyimpulkan bahwa setiap pengguna memiliki daftar hak istimewa yang ditolak atau diberikan sehingga perintah DENY ada untuk secara eksplisit melarang Anda beberapa hak istimewa pada objek database.

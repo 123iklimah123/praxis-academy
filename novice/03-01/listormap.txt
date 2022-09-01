@@ -1,0 +1,11 @@
+List of object–relational mapping software
+This is a list of well-known object–relational mapping software. It is not up-to-date or all-inclusive.
+1	Java
+2	iOS
+3	.NET
+4	Objective-C, Cocoa
+5	Perl
+6	PHP
+7	Python
+8	Ruby
+9	Smalltalk

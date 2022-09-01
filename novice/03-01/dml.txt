@@ -1,0 +1,9 @@
+Bahasa manipulasi data ( DML ) adalah bahasa pemrograman komputer yang digunakan untuk menambah (menyisipkan), menghapus, dan memodifikasi (memperbarui) data dalam database . DML sering merupakan subbahasa dari bahasa database yang lebih luas seperti SQL , dengan DML terdiri dari beberapa operator dalam bahasa tersebut. [1] Pemilihan data baca-saja terkadang dibedakan sebagai bagian dari bahasa kueri data (DQL) yang terpisah, tetapi ini terkait erat dan terkadang juga dianggap sebagai komponen DML; beberapa operator dapat melakukan pemilihan (membaca) dan menulis.
+
+Bahasa manipulasi data yang populer adalah Structured Query Language (SQL), yang digunakan untuk mengambil dan memanipulasi data dalam database relasional . [2] Bentuk lain dari DML adalah yang digunakan oleh IMS /DLI, database CODASYL , seperti IDMS dan lain-lain.
+
+DML atau Data Manipulation Language ialah sub perintah bahasa SQL yang dapat dimanfaatkan ketika memanipulasi data di dalam database yang sebelumnya sudah dibuat. DML ini bisa digunakan setelah Anda menjalankan perintah DDL. Dalam DML ini juga ada sejumlah perintah penting yaitu:
+
+Delete untuk menghapus data yang terdapat di dalam tabel pada database
+Update untuk mengganti data yang terdapat dalam tabel pada database
+Insert untuk memasukkan data-data dalam tabel pada database
