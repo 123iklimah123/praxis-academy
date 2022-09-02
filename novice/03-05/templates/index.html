@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div>
+        <h1>ini request</h1>
+        <form action="" method="post">
+            <input name="nama" type="text">
+            <input name="detail" type="text">
+            <button type="submit">kirim</button>
+
+            </form>
+
+        <hr>
+        <h1>ini response</h1>
+        {{context}}
+        <br>
+        {% for d in context %}
+        <ul>
+            <li>{{d}}</li>
+        </ul>
+        {% endfor %}
+
+</body>
+</html>

@@ -18,3 +18,11 @@ def about():
 
 if __name__ == "__main__":
     app.run()
+
+
+if request.method == "POST":
+        print(20*"=")
+        print(request.form)
+        print(request.form.get("nama"))
+        print(request.form.get("detail"))
+        print(20*"=")

@@ -1,9 +1,0 @@
-Basis data SQL berperilaku kurang seperti koleksi objek, semakin banyak ukuran dan kinerja mulai menjadi masalah; koleksi objek berperilaku kurang seperti tabel dan baris semakin abstraksi mulai penting. SQLAlchemy bertujuan untuk mengakomodasi kedua prinsip ini.
-
-SQLAlchemy menganggap database sebagai mesin aljabar relasional, bukan hanya kumpulan tabel. Baris dapat dipilih tidak hanya dari tabel tetapi juga gabungan dan pernyataan pemilihan lainnya; salah satu dari unit ini dapat disusun menjadi struktur yang lebih besar. Bahasa ekspresi SQLAlchemy dibangun di atas konsep ini dari intinya.
-
-SQLAlchemy paling terkenal dengan object-relational mapper (ORM), komponen opsional yang menyediakan pola data mapper , di mana kelas dapat dipetakan ke database secara terbuka, dengan berbagai cara - memungkinkan model objek dan skema database untuk berkembang dalam cara dipisahkan dengan bersih dari awal.
-
-Pendekatan keseluruhan SQLAlchemy untuk masalah ini sama sekali berbeda dari kebanyakan alat SQL / ORM lainnya, berakar pada apa yang disebut pendekatan berorientasi pujian ; alih-alih menyembunyikan SQL dan detail relasional objek di balik dinding otomatisasi, semua proses diekspos sepenuhnya dalam serangkaian alat yang dapat disusun dan transparan. Perpustakaan mengambil tugas mengotomatisasi tugas-tugas yang berlebihan sementara pengembang tetap mengendalikan bagaimana database diatur dan bagaimana SQL dibangun.
-Footer
-© 2022 GitHub, Inc.

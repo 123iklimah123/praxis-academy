@@ -1,0 +1,458 @@
+Basis data
+
+Artikel ini berisi uraian tentang konsep komputasi. Untuk contoh konsep umum, lihat Daftar database .
+
+Dalam komputasi , database adalah kumpulan terorganisir dari data yang disimpan dan diakses secara elektronik. 
+Basis data kecil dapat disimpan di sistem file , sedangkan basis data besar disimpan di kluster komputer atau penyimpanan cloud . 
+Desain basis data mencakup teknik formal dan pertimbangan praktis, termasuk pemodelan data, representasi dan penyimpanan data yang efisien, 
+bahasa kueri , keamanan dan privasi data sensitif, dan masalah komputasi terdistribusi, 
+termasuk mendukung akses konkuren dan toleransi kesalahan.
+
+Sistem manajemen basis data (DBMS) adalah perangkat lunak yang berinteraksi dengan pengguna akhir, aplikasi, dan 
+basis data itu sendiri untuk menangkap dan menganalisis data. Perangkat lunak DBMS juga mencakup fasilitas inti 
+yang disediakan untuk mengelola database. 
+Jumlah total database, DBMS dan aplikasi terkait dapat disebut sebagai sistem database. 
+Seringkali istilah "database" juga digunakan secara longgar untuk merujuk ke salah satu DBMS, sistem database atau 
+aplikasi yang terkait dengan database.
+
+Ilmuwan komputer dapat mengklasifikasikan sistem manajemen basis data menurut model basis data yang mereka dukung. 
+Database relasional menjadi dominan pada 1980-an. Data model ini sebagai baris dan kolom dalam serangkaian tabel, dan 
+sebagian besar menggunakan SQL untuk menulis dan membuat kueri data. Pada tahun 2000-an, database non-relasional menjadi populer, 
+secara kolektif disebut sebagai NoSQL, karena mereka menggunakan bahasa query yang berbeda.
+
+Terminologi dan ikhtisar
+
+Secara formal, "basis data" mengacu pada sekumpulan data terkait dan cara mengaturnya. 
+Akses ke data ini biasanya disediakan oleh "sistem manajemen basis data" (DBMS) yang terdiri dari satu set 
+perangkat lunak komputer terintegrasi yang memungkinkan pengguna untuk berinteraksi dengan satu atau lebih basis 
+data dan menyediakan akses ke semua data yang terkandung dalam basis data 
+(walaupun pembatasan mungkin ada yang membatasi akses ke data tertentu). 
+DBMS menyediakan berbagai fungsi yang memungkinkan pemasukan, penyimpanan, dan pengambilan informasi 
+dalam jumlah besar dan menyediakan cara untuk mengelola bagaimana informasi itu diatur.
+
+Karena hubungan yang erat di antara mereka, istilah "basis data" sering digunakan dengan santai untuk 
+merujuk pada basis data dan DBMS yang digunakan untuk memanipulasinya.
+
+Di luar dunia teknologi informasi profesional , istilah basis data sering digunakan untuk merujuk pada kumpulan data 
+terkait (seperti spreadsheet atau indeks kartu) karena persyaratan ukuran dan penggunaan biasanya mengharuskan 
+penggunaan sistem manajemen basis data.
+
+DBMS yang ada menyediakan berbagai fungsi yang memungkinkan pengelolaan database dan datanya 
+yang dapat diklasifikasikan ke dalam empat kelompok fungsional utama:
+1. Definisi data – Pembuatan, modifikasi, dan penghapusan definisi yang mendefinisikan organisasi data.
+2. Update – Penyisipan, modifikasi, dan penghapusan data aktual.
+3. Retrieval – Memberikan informasi dalam bentuk yang dapat digunakan secara langsung atau untuk diproses 
+lebih lanjut oleh aplikasi lain. Data yang diambil dapat dibuat tersedia dalam bentuk yang pada dasarnya 
+sama dengan yang disimpan dalam database atau dalam bentuk baru yang diperoleh dengan mengubah 
+atau menggabungkan data yang ada dari database.
+4. Administrasi – Mendaftar dan memantau pengguna, menegakkan keamanan data, memantau kinerja, 
+menjaga integritas data, menangani kontrol konkurensi, dan memulihkan informasi yang telah rusak 
+oleh beberapa peristiwa seperti kegagalan sistem yang tidak terduga.
+
+Baik database dan DBMS-nya sesuai dengan prinsip-prinsip model database tertentu . 
+"Sistem basis data" mengacu secara kolektif ke model basis data, sistem manajemen basis data, dan basis data.
+
+Secara fisik, server database adalah komputer khusus yang menyimpan database aktual dan hanya 
+menjalankan DBMS dan perangkat lunak terkait. Server database biasanya komputer multiprosesor, 
+dengan memori yang besar dan array disk RAID yang digunakan untuk penyimpanan yang stabil. 
+Akselerator basis data perangkat keras, yang terhubung ke satu atau lebih server melalui saluran berkecepatan tinggi, 
+juga digunakan dalam lingkungan pemrosesan transaksi volume besar. DBMS ditemukan di jantung sebagian besar aplikasi database.
+DBMS dapat dibangun di sekitar kernel multitasking kustom dengan dukungan jaringan built-in , tetapi DBMS modern 
+biasanya mengandalkan sistem operasi standar untuk menyediakan fungsi-fungsi ini.
+
+Karena DBMS terdiri dari pasar yang signifikan, vendor komputer dan penyimpanan sering kali mempertimbangkan 
+persyaratan DBMS dalam rencana pengembangan mereka sendiri.
+
+Basis data dan DBMS dapat dikategorikan menurut model basis data yang didukungnya (seperti relasional atau XML), 
+jenis komputer yang dijalankannya (dari cluster server ke ponsel), bahasa kueri (s) digunakan untuk mengakses database 
+(seperti SQL atau XQuery ), dan rekayasa internalnya, yang memengaruhi kinerja, skalabilitas , ketahanan, dan keamanan.
+
+Sejarah
+
+Ukuran, kemampuan, dan kinerja database dan DBMS masing-masing telah tumbuh dalam urutan besarnya. 
+Peningkatan kinerja ini dimungkinkan oleh kemajuan teknologi di bidang prosesor, memori komputer, 
+penyimpanan komputer, dan jaringan komputer. Konsep database dimungkinkan oleh munculnya media penyimpanan 
+akses langsung seperti disk magnetik, yang menjadi tersedia secara luas pada pertengahan 1960-an; sistem sebelumnya 
+mengandalkan penyimpanan data berurutan pada pita magnetik. Perkembangan selanjutnya dari teknologi database dapat dibagi 
+menjadi tiga era berdasarkan model atau struktur data: navigasi , [8] SQL/ relasional, dan pasca-relasional.
+
+Dua model data navigasi awal utama adalah model hierarkis dan model CODASYL (model jaringan ). 
+Ini ditandai dengan penggunaan pointer (seringkali alamat disk fisik) untuk mengikuti hubungan dari satu record ke record lainnya.
+
+Model relasional, pertama kali diusulkan pada tahun 1970 oleh Edgar F. Codd, berangkat dari tradisi ini 
+dengan bersikeras bahwa aplikasi harus mencari data dengan konten, bukan dengan mengikuti link. 
+Model relasional menggunakan set tabel gaya buku besar, masing-masing digunakan untuk jenis entitas yang berbeda. 
+Hanya pada pertengahan 1980-an perangkat keras komputasi menjadi cukup kuat untuk memungkinkan penyebaran 
+luas sistem relasional (DBMS plus aplikasi). Namun, pada awal 1990-an, sistem relasional mendominasi di semua aplikasi 
+pemrosesan data berskala besar, dan pada 2018 mereka tetap dominan: IBM Db2, Oracle, MySQL, dan Microsoft SQL Server 
+adalah yang paling banyak dicariDBMS. Bahasa database yang dominan, SQL standar untuk model relasional, telah mempengaruhi 
+bahasa database untuk model data lainnya.
+
+Database objek dikembangkan pada 1980-an untuk mengatasi ketidaknyamanan ketidakcocokan impedansi objek-relasional, 
+yang menyebabkan munculnya istilah "pasca-relasional" dan juga pengembangan database objek-relasional hybrid .
+
+Generasi berikutnya dari database pasca-relasional di akhir tahun 2000-an dikenal sebagai database NoSQL, 
+memperkenalkan penyimpanan nilai kunci yang cepat dan database berorientasi dokumen. Sebuah "generasi berikutnya" yang 
+bersaing yang dikenal sebagai database NewSQL mencoba implementasi baru yang mempertahankan model relasional/SQL sambil bertujuan 
+untuk mencocokkan kinerja tinggi NoSQL dibandingkan dengan DBMS relasional yang tersedia secara komersial.
+
+1960-an, DBMS navigasi
+
+Pengenalan istilah database bertepatan dengan ketersediaan penyimpanan akses langsung (disk dan drum) 
+dari pertengahan 1960-an dan seterusnya. Istilah ini mewakili kontras dengan sistem berbasis kaset di masa lalu, 
+yang memungkinkan penggunaan interaktif bersama daripada pemrosesan batch harian. Oxford English Dictionary mengutip 
+laporan tahun 1962 oleh System Development Corporation of California sebagai yang pertama menggunakan istilah "data-base" d
+alam pengertian teknis tertentu.
+
+Sebagai komputer tumbuh dalam kecepatan dan kemampuan, sejumlah sistem database tujuan umum muncul; pada pertengahan 1960-an 
+sejumlah sistem seperti itu mulai digunakan secara komersial. Ketertarikan pada standar mulai tumbuh, dan Charles Bachman,
+penulis salah satu produk tersebut, Integrated Data Store (IDS), mendirikan Grup Tugas Basis Data dalam CODASYL, 
+grup yang bertanggung jawab atas pembuatan dan standarisasi COBOL. Pada tahun 1971, Database Task Group menyampaikan standar mereka, 
+yang umumnya dikenal sebagai pendekatan CODASYL, dan segera sejumlah produk komersial berdasarkan pendekatan ini memasuki pasar.
+
+Pendekatan CODASYL menawarkan aplikasi kemampuan untuk menavigasi di sekitar kumpulan data terkait 
+yang dibentuk menjadi jaringan besar. Aplikasi dapat menemukan catatan dengan salah satu dari tiga metode:
+1. Penggunaan kunci utama (dikenal sebagai kunci CALC, biasanya diimplementasikan dengan hashing )
+2. Menavigasi hubungan (disebut set ) dari satu record ke record lainnya
+3. Memindai semua catatan secara berurutan
+
+Kemudian sistem menambahkan B-tree untuk menyediakan jalur akses alternatif. Banyak basis data CODASYL juga 
+menambahkan bahasa kueri deklaratif untuk pengguna akhir (berbeda dari API navigasi). Namun, database CODASYL sangat kompleks 
+dan membutuhkan pelatihan dan upaya yang signifikan untuk menghasilkan aplikasi yang berguna.
+
+IBM juga memiliki DBMS sendiri pada tahun 1966, yang dikenal sebagai Sistem Manajemen Informasi (IMS). 
+IMS adalah pengembangan perangkat lunak yang ditulis untuk program Apollo pada System/360 . 
+IMS secara umum memiliki konsep yang mirip dengan CODASYL, tetapi menggunakan hierarki yang ketat untuk model navigasi 
+datanya daripada model jaringan CODASYL. Kedua konsep tersebut kemudian dikenal sebagai database navigasi 
+karena cara data diakses: istilah ini dipopulerkan oleh presentasi Penghargaan Turing tahun 1973 oleh Bachman, The Programmer as Navigator. 
+IMS diklasifikasikan oleh IBM sebagai database hierarkis. IDMS dan Cincom Systems ' TOTALdatabase diklasifikasikan 
+sebagai database jaringan. IMS tetap digunakan pada 2014.
+
+1970-an, DBMS relasional
+
+Edgar F. Codd bekerja di IBM di San Jose, California, di salah satu kantor cabang mereka 
+yang terutama terlibat dalam pengembangan sistem hard disk. Dia tidak senang dengan model navigasi pendekatan CODASYL, 
+terutama kurangnya fasilitas "pencarian". Pada tahun 1970, ia menulis sejumlah makalah yang 
+menguraikan pendekatan baru untuk konstruksi basis data yang akhirnya memuncak dalam terobosan Model Data Relasional untuk Bank Data Bersama Besar. 
+
+Dalam makalah ini, ia menjelaskan sistem baru untuk menyimpan dan bekerja dengan database besar. 
+Alih-alih catatan disimpan dalam semacam daftar terkait catatan bentuk bebas seperti di CODASYL, 
+ide Codd adalah untuk mengatur data sebagai sejumlah "tabel", setiap tabel digunakan untuk jenis entitas yang berbeda. 
+Setiap tabel akan berisi sejumlah kolom tetap yang berisi atribut entitas. Satu atau lebih kolom dari setiap tabel ditetapkan 
+sebagai kunci utama yang dengannya baris tabel dapat diidentifikasi secara unik; referensi silang antar tabel
+selalu menggunakan kunci utama ini, bukan alamat disk, dan kueri akan bergabung dengan tabel berdasarkan hubungan kunci ini, 
+menggunakan serangkaian operasi berdasarkan sistem matematikakalkulus relasional (dari mana model mengambil namanya). 
+Memisahkan data menjadi satu set tabel (atau relasi ) yang dinormalisasi bertujuan untuk memastikan bahwa setiap "fakta" 
+hanya disimpan satu kali, sehingga menyederhanakan operasi pembaruan. Tabel virtual yang disebut tampilan dapat menyajikan 
+data dengan cara yang berbeda untuk pengguna yang berbeda, tetapi tampilan tidak dapat diperbarui secara langsung.
+
+Penggunaan kunci utama (pengidentifikasi berorientasi pengguna) untuk mewakili hubungan tabel silang, 
+daripada alamat disk, memiliki dua motivasi utama. Dari perspektif teknik, ini memungkinkan tabel untuk dipindahkan 
+dan diubah ukurannya tanpa reorganisasi database yang mahal. Tetapi Codd lebih tertarik pada perbedaan dalam semantik: 
+penggunaan pengidentifikasi eksplisit membuatnya lebih mudah untuk mendefinisikan operasi pembaruan dengan definisi 
+matematika yang bersih, dan itu juga memungkinkan operasi kueri didefinisikan dalam hal disiplin kalkulus predikat 
+orde pertama yang mapan.; karena operasi ini memiliki properti matematika yang bersih, menjadi mungkin untuk menulis 
+ulang kueri dengan cara yang terbukti benar, yang merupakan dasar dari pengoptimalan kueri. 
+Tidak ada kehilangan ekspresi dibandingkan dengan model hierarkis atau jaringan, meskipun koneksi antar tabel tidak lagi eksplisit.
+
+Dalam model hierarki dan jaringan, catatan diizinkan memiliki struktur internal yang kompleks. 
+Misalnya, riwayat gaji seorang karyawan mungkin direpresentasikan sebagai "grup berulang" dalam catatan karyawan. 
+Dalam model relasional, proses normalisasi menyebabkan struktur internal seperti itu digantikan oleh data yang 
+disimpan dalam beberapa tabel, yang hanya dihubungkan oleh kunci logis.
+
+Misalnya, penggunaan umum dari sistem database adalah untuk melacak informasi tentang pengguna, nama mereka, 
+informasi login, berbagai alamat dan nomor telepon. Dalam pendekatan navigasi, semua data ini akan ditempatkan 
+dalam satu catatan panjang variabel. Dalam pendekatan relasional, data akan dinormalisasi menjadi tabel pengguna, 
+tabel alamat dan tabel nomor telepon (misalnya). Catatan akan dibuat dalam tabel opsional ini hanya jika alamat 
+atau nomor telepon benar-benar diberikan.
+
+Selain mengidentifikasi baris/catatan menggunakan pengidentifikasi logis daripada alamat disk, 
+Codd mengubah cara aplikasi mengumpulkan data dari beberapa catatan. Daripada mengharuskan aplikasi untuk mengumpulkan 
+data satu catatan pada satu waktu dengan menavigasi tautan, mereka akan menggunakan bahasa kueri deklaratif yang 
+menyatakan data apa yang diperlukan, daripada jalur akses yang digunakan untuk menemukannya. 
+Menemukan jalur akses yang efisien ke data menjadi tanggung jawab sistem manajemen basis data, bukan pemrogram aplikasi. 
+Proses ini, yang disebut optimasi kueri, bergantung pada fakta bahwa kueri diekspresikan dalam bentuk logika matematika.
+
+Makalah Codd diambil oleh dua orang di Berkeley, Eugene Wong dan Michael Stonebraker. 
+Mereka memulai proyek yang dikenal sebagai INGRES menggunakan dana yang telah dialokasikan untuk proyek basis data 
+geografis dan pemrogram mahasiswa untuk menghasilkan kode. Mulai tahun 1973, INGRES mengirimkan produk uji pertamanya 
+yang umumnya siap digunakan secara luas pada tahun 1979. INGRES mirip dengan Sistem R dalam beberapa hal, 
+termasuk penggunaan "bahasa" untuk akses data, yang dikenal sebagai QUEL. 
+Seiring waktu, INGRES pindah ke standar SQL yang muncul.
+
+Pendekatan terintegrasi
+
+Pada 1970-an dan 1980-an, upaya dilakukan untuk membangun sistem database dengan perangkat keras 
+dan perangkat lunak yang terintegrasi. Filosofi yang mendasari adalah bahwa integrasi tersebut akan 
+memberikan kinerja yang lebih tinggi dengan biaya yang lebih rendah. Contohnya adalah IBM System/38, 
+penawaran awal Teradata, dan mesin database Britton Lee, Inc.
+
+Pendekatan lain untuk dukungan perangkat keras untuk manajemen basis data adalah akselerator CAFS ICL, 
+pengontrol disk perangkat keras dengan kemampuan pencarian yang dapat diprogram. Dalam jangka panjang, 
+upaya ini umumnya tidak berhasil karena mesin database khusus tidak dapat mengikuti perkembangan pesat dan 
+kemajuan komputer tujuan umum. Jadi kebanyakan sistem basis data saat ini adalah sistem perangkat lunak yang 
+berjalan pada perangkat keras untuk keperluan umum, menggunakan penyimpanan data komputer untuk keperluan umum. 
+Namun, ide ini masih dikejar dalam aplikasi tertentu oleh beberapa perusahaan seperti Netezza dan Oracle (Exadata).
+
+IBM sendiri melakukan satu uji implementasi model relasional, PRTV, dan satu produksi, Sistem Bisnis 12, 
+keduanya sekarang dihentikan. Honeywell menulis MRDS untuk Multics, dan sekarang ada dua implementasi baru: 
+Alphora Dataphor dan Rel. Sebagian besar implementasi DBMS lain yang biasanya disebut relasional sebenarnya adalah DBMS SQL.
+
+Pada tahun 1970, University of Michigan memulai pengembangan Sistem Manajemen Informasi MICRO berdasarkan model Data Teori Set DL Childs. 
+MICRO digunakan untuk mengelola kumpulan data yang sangat besar oleh Departemen Tenaga Kerja AS, Badan Perlindungan Lingkungan AS, 
+dan peneliti dari Universitas Alberta, Universitas Michigan, dan Universitas Negeri Wayne. 
+Itu berjalan di komputer mainframe IBM menggunakan Sistem Terminal Michigan. Sistem ini tetap diproduksi hingga tahun 1998.
+
+Codd menggunakan istilah matematika untuk mendefinisikan model: relasi, tupel, dan domain daripada tabel, baris, dan kolom. 
+Terminologi yang sekarang akrab berasal dari implementasi awal. Codd kemudian akan mengkritik 
+kecenderungan implementasi praktis untuk berangkat dari dasar matematika yang model didasarkan.
+
+Akhir 1970-an, SQL DBMS
+
+IBM mulai mengerjakan sistem prototipe secara longgar berdasarkan konsep Codd sebagai Sistem R pada awal 1970-an. 
+Versi pertama siap pada tahun 1974/5, dan kemudian mulai bekerja pada sistem multi-tabel di mana data dapat 
+dibagi sehingga semua data untuk catatan (beberapa di antaranya opsional) tidak harus disimpan dalam "potongan" 
+besar tunggal. Versi multi-pengguna berikutnya diuji oleh pelanggan pada tahun 1978 dan 1979, pada saat itu 
+bahasa kueri standar – SQL – telah ditambahkan. Ide Codd memantapkan diri sebagai dapat diterapkan dan lebih 
+unggul dari CODASYL, mendorong IBM untuk mengembangkan versi produksi yang sebenarnya dari Sistem R, 
+yang dikenal sebagai SQL/DS , dan, kemudian, Database 2 (IBM Db2 ).
+
+Oracle Database Larry Ellison (atau lebih sederhananya, Oracle ) dimulai dari rantai yang berbeda, 
+berdasarkan makalah IBM tentang System R. Meskipun implementasi Oracle V1 selesai pada tahun 1978, 
+tidak sampai Oracle Versi 2 ketika Ellison mengalahkan IBM ke pasar pada tahun 1979.
+
+Stonebraker melanjutkan untuk menerapkan pelajaran dari INGRES untuk mengembangkan database baru, 
+Postgres, yang sekarang dikenal sebagai PostgreSQL. PostgreSQL sering digunakan untuk aplikasi misi-kritis global 
+(pendaftar nama domain .org dan .info menggunakannya sebagai penyimpanan data utama mereka, 
+seperti halnya banyak perusahaan besar dan lembaga keuangan).
+
+Di Swedia, makalah Codd juga dibaca dan Mimer SQL dikembangkan pada pertengahan 1970-an di Universitas Uppsala. 
+Pada tahun 1984, proyek ini dikonsolidasikan menjadi perusahaan independen.
+
+Model data lain, model hubungan entitas, muncul pada tahun 1976 dan mendapatkan popularitas untuk desain 
+database karena menekankan deskripsi yang lebih akrab daripada model relasional sebelumnya. 
+Kemudian, konstruksi entitas-hubungan dipasang sebagai konstruksi pemodelan data untuk model relasional, 
+dan perbedaan antara keduanya menjadi tidak relevan.
+
+1980-an, di desktop
+
+Tahun 1980-an mengantarkan era komputasi desktop. 
+Komputer baru memberdayakan penggunanya dengan spreadsheet seperti Lotus 1-2-3 dan 
+perangkat lunak database seperti dBASE . Produk dBASE ringan dan mudah dipahami 
+oleh pengguna komputer mana pun. C. Wayne Ratliff, pencipta dBASE, menyatakan: 
+"dBASE berbeda dari program seperti BASIC, C, FORTRAN, dan COBOL karena banyak pekerjaan kotor 
+telah dilakukan. Manipulasi data dilakukan oleh dBASE bukan oleh pengguna, 
+sehingga pengguna dapat berkonsentrasi pada apa yang dia lakukan, daripada harus mengacaukan detail 
+kotor membuka, membaca, dan menutup file, dan mengelola alokasi ruang." dBASE adalah salah satu judul 
+perangkat lunak terlaris di tahun 1980-an dan awal 1990-an.
+
+1990-an, berorientasi objek
+
+Tahun 1990-an, seiring dengan peningkatan pemrograman berorientasi objek, 
+melihat pertumbuhan bagaimana data di berbagai database ditangani. 
+Programmer dan desainer mulai memperlakukan data dalam database mereka sebagai objek. 
+Artinya, jika data seseorang berada dalam database, atribut orang tersebut, seperti alamat, 
+nomor telepon, dan usianya, kini dianggap milik orang tersebut alih-alih menjadi data asing. 
+Hal ini memungkinkan hubungan antara data terkait dengan objek dan atributnya dan bukan dengan bidang individual. 
+Istilah " ketidaksesuaian impedansi objek-relasional " menggambarkan ketidaknyamanan menerjemahkan 
+antara objek yang diprogram dan tabel database. Database objek dan database objek-relasional mencoba 
+memecahkan masalah ini dengan menyediakan bahasa berorientasi objek (kadang-kadang sebagai ekstensi ke SQL) 
+yang dapat digunakan programmer sebagai alternatif untuk SQL relasional murni. Di sisi pemrograman, 
+perpustakaan yang dikenal sebagai pemetaan relasional objek (ORM) mencoba memecahkan masalah yang sama.
+
+2000-an, NoSQL dan NewSQL
+
+Database XML adalah jenis database berorientasi dokumen terstruktur yang memungkinkan query berdasarkan atribut dokumen XML . Database XML sebagian besar digunakan dalam aplikasi di mana data mudah dilihat sebagai kumpulan dokumen, dengan struktur yang dapat bervariasi dari yang sangat fleksibel hingga yang sangat kaku: contohnya termasuk artikel ilmiah, paten, pengajuan pajak, dan catatan personalia.
+
+Basis data NoSQL seringkali sangat cepat, tidak memerlukan skema tabel tetap, menghindari operasi gabungan dengan menyimpan data yang didenormalisasi , dan dirancang untuk diskalakan secara horizontal .
+
+Dalam beberapa tahun terakhir, ada permintaan yang kuat untuk basis data terdistribusi secara besar-besaran dengan toleransi partisi yang tinggi, tetapi menurut teorema CAP , tidak mungkin bagi sistem terdistribusi untuk secara bersamaan memberikan jaminan konsistensi, ketersediaan, dan toleransi partisi. Sistem terdistribusi dapat memenuhi dua jaminan ini pada saat yang sama, tetapi tidak ketiganya. Untuk alasan itu, banyak database NoSQL menggunakan apa yang disebut konsistensi akhirnya untuk memberikan jaminan ketersediaan dan toleransi partisi dengan tingkat konsistensi data yang berkurang.
+
+NewSQL adalah kelas database relasional modern yang bertujuan untuk memberikan kinerja terukur yang sama dari sistem NoSQL untuk beban kerja pemrosesan transaksi online (baca-tulis) sambil tetap menggunakan SQL dan mempertahankan jaminan ACID dari sistem database tradisional.
+
+Klasifikasi
+
+Salah satu cara untuk mengklasifikasikan database melibatkan jenis isinya, misalnya: bibliografi , dokumen-teks, statistik, atau objek multimedia. Cara lain adalah dengan bidang aplikasi mereka, misalnya: akuntansi, komposisi musik, film, perbankan, manufaktur, atau asuransi. Cara ketiga adalah dengan beberapa aspek teknis, seperti struktur database atau tipe antarmuka. Bagian ini mencantumkan beberapa kata sifat yang digunakan untuk mengkarakterisasi berbagai jenis database.
+1. Basis data dalam memori adalah basis data yang terutama berada di memori utama , tetapi biasanya didukung oleh penyimpanan data komputer yang tidak mudah menguap. Basis data memori utama lebih cepat daripada basis data disk, dan sering digunakan di mana waktu respons sangat penting, seperti pada peralatan jaringan telekomunikasi.
+2. Basis data aktif mencakup arsitektur yang digerakkan oleh peristiwa yang dapat merespons kondisi baik di dalam maupun di luar basis data. Kemungkinan penggunaan termasuk pemantauan keamanan, peringatan, pengumpulan statistik dan otorisasi. Banyak database menyediakan fitur database aktif dalam bentuk pemicu database.
+3. Sebuah database awan bergantung pada teknologi awan . Baik database dan sebagian besar DBMS-nya berada dari jarak jauh, "di awan", sementara aplikasinya dikembangkan oleh pemrogram dan kemudian dipelihara dan digunakan oleh pengguna akhir melalui browser web dan Open API.
+4. Data warehouse mengarsipkan data dari database operasional dan seringkali dari sumber eksternal seperti firma riset pasar. Gudang menjadi sumber pusat data untuk digunakan oleh manajer dan pengguna akhir lainnya yang mungkin tidak memiliki akses ke data operasional. Misalnya, data penjualan mungkin digabungkan ke total mingguan dan dikonversi dari kode produk internal untuk menggunakan UPC sehingga dapat dibandingkan dengan data ACNielsen . Beberapa komponen dasar dan penting dari data warehousing termasuk mengekstraksi, menganalisis, dan menambang data, mengubah, memuat, dan mengelola data sehingga membuatnya tersedia untuk digunakan lebih lanjut.
+5. Database deduktif menggabungkan pemrograman logika dengan database relasional.
+6. Basis data terdistribusi adalah basis data di mana data dan DBMS menjangkau banyak komputer.
+7. Database berorientasi dokumen dirancang untuk menyimpan, mengambil, dan mengelola informasi berorientasi dokumen, atau semi terstruktur. Database berorientasi dokumen adalah salah satu kategori utama database NoSQL.
+8. Sistem basis data tertanam adalah DBMS yang terintegrasi erat dengan perangkat lunak aplikasi yang memerlukan akses ke data yang disimpan sedemikian rupa sehingga DBMS tersembunyi dari pengguna akhir aplikasi dan memerlukan sedikit atau tanpa pemeliharaan berkelanjutan.
+9. Basis data pengguna akhir terdiri dari data yang dikembangkan oleh pengguna akhir individu. Contohnya adalah kumpulan dokumen, spreadsheet, presentasi, multimedia, dan file lainnya. Beberapa produk ada untuk mendukung database tersebut. Beberapa di antaranya jauh lebih sederhana daripada DBMS lengkap, dengan fungsionalitas DBMS yang lebih mendasar.
+10. Sebuah sistem database federasi terdiri dari beberapa database yang berbeda, masing-masing dengan DBMS sendiri. Hal ini ditangani sebagai database tunggal oleh sistem manajemen database federasi (FDBMS), yang secara transparan mengintegrasikan beberapa DBMS otonom, mungkin dari jenis yang berbeda (dalam hal ini juga akan menjadi sistem database heterogen ), dan menyediakan mereka dengan pandangan konseptual yang terintegrasi. .
+11. Kadang-kadang istilah multi-database digunakan sebagai sinonim untuk database federasi, meskipun mungkin merujuk pada kelompok database yang kurang terintegrasi (misalnya, tanpa FDBMS dan skema terintegrasi yang dikelola) yang bekerja sama dalam satu aplikasi. Dalam hal ini, biasanya middleware digunakan untuk distribusi, yang biasanya mencakup protokol commit atom (ACP), misalnya, protokol commit dua fase , untuk memungkinkan transaksi terdistribusi (global) di seluruh database yang berpartisipasi.
+12. Database grafik adalah jenis database NoSQL yang menggunakan struktur grafik dengan node, tepi, dan properti untuk mewakili dan menyimpan informasi. Database grafik umum yang dapat menyimpan grafik apapun berbeda dari database grafik khusus seperti triplestore dan database jaringan .
+13. Array DBMS adalah jenis DBMS NoSQL yang memungkinkan pemodelan, penyimpanan, dan pengambilan (biasanya besar) array multi-dimensi seperti citra satelit dan output simulasi iklim.
+14. Dalam database hypertext atau hypermedia , setiap kata atau potongan teks yang mewakili suatu objek, misalnya, potongan teks lain, artikel, gambar, atau film, dapat di- hyperlink ke objek tersebut. Database hypertext sangat berguna untuk mengatur sejumlah besar informasi yang berbeda. Misalnya, mereka berguna untuk mengatur ensiklopedia online , di mana pengguna dapat dengan mudah melompati teks. Dengan demikian World Wide Web adalah database hypertext terdistribusi besar.
+15. Basis pengetahuan (disingkat KB,kb) adalah jenis basis data khusus untuk manajemen pengetahuan , yang menyediakan sarana untuk pengumpulan, pengorganisasian, dan pengambilan pengetahuan yang terkomputerisasi . Juga kumpulan data yang mewakili masalah dengan solusi mereka dan pengalaman terkait.
+16. Basis data seluler dapat dijalankan atau disinkronkan dari perangkat komputasi seluler.
+17. Database operasional menyimpan data rinci tentang operasi suatu organisasi. Mereka biasanya memproses pembaruan dengan volume yang relatif tinggi menggunakan transaksi. Contohnya termasuk database pelanggan yang mencatat kontak, kredit, dan informasi demografis tentang pelanggan bisnis, database personalia yang menyimpan informasi seperti gaji, tunjangan, data keterampilan tentang karyawan, sistem perencanaan sumber daya perusahaan yang mencatat rincian tentang komponen produk, persediaan suku cadang, dan keuangan. database yang melacak uang organisasi, akuntansi dan transaksi keuangan.
+18. Basis data paralel berupaya meningkatkan kinerja melalui paralelisasi untuk tugas-tugas seperti memuat data, membangun indeks, dan mengevaluasi kueri.
+Arsitektur DBMS paralel utama yang diinduksi oleh arsitektur perangkat keras yang mendasarinya adalah:
+a. Arsitektur memori bersama , di mana beberapa prosesor berbagi ruang memori utama, serta penyimpanan data lainnya.
+b. Arsitektur disk bersama , di mana setiap unit pemrosesan (biasanya terdiri dari beberapa prosesor) memiliki memori utamanya sendiri, tetapi semua unit berbagi penyimpanan lainnya.
+c. Arsitektur shared-nothing , di mana setiap unit pemrosesan memiliki memori utama dan penyimpanan lainnya.
+19. Database probabilistik menggunakan logika fuzzy untuk menarik kesimpulan dari data yang tidak tepat.
+20. Basis data waktu nyata memproses transaksi dengan cukup cepat agar hasilnya kembali dan segera ditindaklanjuti.
+21. Basis data spasial dapat menyimpan data dengan fitur multidimensi. Kueri pada data tersebut mencakup kueri berbasis lokasi, seperti "Di mana hotel terdekat di wilayah saya?".
+22. Basis data temporal memiliki aspek waktu bawaan, misalnya model data temporal dan versi temporal SQL . Lebih khusus lagi, aspek temporal biasanya mencakup waktu valid dan waktu transaksi.
+23. Database berorientasi terminologi dibangun di atas database berorientasi objek , sering disesuaikan untuk bidang tertentu.
+24. Basis data data tidak terstruktur dimaksudkan untuk menyimpan beragam objek dengan cara yang dapat dikelola dan dilindungi yang tidak cocok secara alami dan nyaman dalam basis data umum. Ini mungkin termasuk pesan email, dokumen, jurnal, objek multimedia, dll. Nama mungkin menyesatkan karena beberapa objek bisa sangat terstruktur. Namun, seluruh koleksi objek yang mungkin tidak sesuai dengan kerangka kerja terstruktur yang telah ditentukan sebelumnya. Sebagian besar DBMS yang sudah mapan sekarang mendukung data tidak terstruktur dalam berbagai cara, dan DBMS baru yang berdedikasi sedang bermunculan.
+
+Sistem manajemen basis data
+
+Connolly dan Begg mendefinisikan sistem manajemen basis data (DBMS) sebagai "sistem perangkat lunak yang memungkinkan pengguna untuk mendefinisikan, membuat, memelihara, dan mengontrol akses ke basis data". [24] Contoh DBMS termasuk MySQL , PostgreSQL , Microsoft SQL Server , Oracle Database , dan Microsoft Access .
+
+Akronim DBMS terkadang diperluas untuk menunjukkan model basis data yang mendasarinya , dengan RDBMS untuk relasional , OODBMS untuk objek (berorientasi) dan ORDBMS untuk model relasional objek . Ekstensi lain dapat menunjukkan beberapa karakteristik lain, seperti DDBMS untuk sistem manajemen basis data terdistribusi.
+
+Fungsionalitas yang disediakan oleh DBMS dapat sangat bervariasi. Fungsionalitas inti adalah penyimpanan, pengambilan, dan pembaruan data. Codd mengusulkan fungsi dan layanan berikut yang harus disediakan oleh DBMS tujuan umum yang lengkap:
+1. Penyimpanan, pengambilan, dan pembaruan data
+2. Katalog atau kamus data yang dapat diakses pengguna yang menjelaskan metadata
+Dukungan untuk transaksi dan konkurensi
+Fasilitas untuk memulihkan database jika rusak
+3. Dukungan untuk otorisasi akses dan pembaruan data
+4. Akses dukungan dari lokasi terpencil
+5. Menegakkan batasan untuk memastikan data dalam database mematuhi aturan tertentu
+Secara umum juga diharapkan DBMS akan menyediakan seperangkat utilitas untuk tujuan yang mungkin diperlukan untuk mengelola database secara efektif, termasuk utilitas impor, ekspor, pemantauan, defragmentasi, dan analisis. Bagian inti dari DBMS yang berinteraksi antara database dan antarmuka aplikasi kadang-kadang disebut sebagai mesin database.
+
+Seringkali DBMS akan memiliki parameter konfigurasi yang dapat disetel secara statis dan dinamis, misalnya jumlah maksimum memori utama pada server yang dapat digunakan database. Kecenderungannya adalah meminimalkan jumlah konfigurasi manual, dan untuk kasus seperti database tertanam , kebutuhan untuk menargetkan administrasi nol adalah yang terpenting.
+
+DBMS perusahaan besar yang besar cenderung meningkat dalam ukuran dan fungsionalitas dan dapat melibatkan ribuan tahun upaya pengembangan manusia sepanjang masa hidup mereka.
+
+DBMS multi-pengguna awal biasanya hanya mengizinkan aplikasi untuk berada di komputer yang sama dengan akses melalui terminal atau perangkat lunak emulasi terminal. Arsitektur client-server adalah pengembangan di mana aplikasi berada di desktop klien dan database di server memungkinkan pemrosesan untuk didistribusikan. Ini berkembang menjadi arsitektur multitier yang menggabungkan server aplikasi dan server web dengan antarmuka pengguna akhir melalui browser web dengan database hanya terhubung langsung ke tingkat yang berdekatan. 
+
+Sebuah DBMS tujuan umum akan menyediakan antarmuka pemrograman aplikasi publik (API) dan opsional prosesor untuk bahasa database seperti SQL untuk memungkinkan aplikasi yang akan ditulis untuk berinteraksi dengan dan memanipulasi database. DBMS tujuan khusus dapat menggunakan API pribadi dan secara khusus dikustomisasi dan ditautkan ke satu aplikasi. Misalnya, sistem email melakukan banyak fungsi DBMS tujuan umum seperti penyisipan pesan, penghapusan pesan, penanganan lampiran, pencarian daftar blokir, pengaitan pesan dengan alamat email dan sebagainya, namun fungsi ini terbatas pada apa yang diperlukan untuk menangani surel.
+
+Aplikasi
+
+Interaksi eksternal dengan database akan melalui program aplikasi yang berinteraksi dengan DBMS. Ini dapat berkisar dari alat database yang memungkinkan pengguna untuk mengeksekusi kueri SQL secara tekstual atau grafis, hingga situs web yang kebetulan menggunakan database untuk menyimpan dan mencari informasi.
+
+Antarmuka program aplikasi
+
+Seorang programmer akan mengkodekan interaksi ke database (kadang-kadang disebut sebagai sumber data ) melalui antarmuka program aplikasi (API) atau melalui bahasa database . API atau bahasa tertentu yang dipilih perlu didukung oleh DBMS, mungkin secara tidak langsung melalui praprosesor atau API penghubung. Beberapa tujuan API untuk menjadi database independen, ODBC menjadi contoh yang umum dikenal. API umum lainnya termasuk JDBC dan ADO.NET .
+
+Bahasa basis data
+
+Bahasa database adalah bahasa tujuan khusus, yang memungkinkan satu atau lebih dari tugas-tugas berikut, kadang-kadang dibedakan sebagai subbahasa :
+
+1. Bahasa kontrol data (DCL) – mengontrol akses ke data;
+2. Bahasa definisi data (DDL) – mendefinisikan tipe data seperti membuat, mengubah, atau menjatuhkan tabel dan hubungan di antara mereka;
+3. Bahasa manipulasi data (DML) – melakukan tugas seperti memasukkan, memperbarui, atau menghapus kejadian data;
+4. Data query language (DQL) – memungkinkan pencarian informasi dan komputasi informasi turunan.
+
+Bahasa database khusus untuk model data tertentu. Contoh penting meliputi:
+
+1. SQL menggabungkan peran definisi data, manipulasi data, dan kueri dalam satu bahasa. Itu adalah salah satu bahasa komersial pertama untuk model relasional, meskipun dalam beberapa hal menyimpang dari model relasional seperti yang dijelaskan oleh Codd (misalnya, baris dan kolom tabel dapat dipesan). SQL menjadi standar dari American National Standards Institute (ANSI) pada tahun 1986, dan Organisasi Internasional untuk Standardisasi (ISO) pada tahun 1987. Standar telah ditingkatkan secara teratur sejak dan didukung (dengan berbagai tingkat kesesuaian) oleh semua komersial utama DBMS relasional. 
+2. OQL adalah standar bahasa model objek (dari Grup Manajemen Data Objek ). Ini telah mempengaruhi desain beberapa bahasa query yang lebih baru seperti JDOQL dan EJB QL .
+3. XQuery adalah bahasa query XML standar yang diimplementasikan oleh sistem database XML seperti MarkLogic dan eXist , oleh database relasional dengan kemampuan XML seperti Oracle dan Db2, dan juga oleh prosesor XML dalam memori seperti Saxon .
+4. SQL/XML menggabungkan XQuery dengan SQL. 
+
+Bahasa database juga dapat menggabungkan fitur-fitur seperti:
+
+1. Konfigurasi khusus DBMS dan manajemen mesin penyimpanan
+2. Komputasi untuk mengubah hasil kueri, seperti penghitungan, penjumlahan, rata-rata, pengurutan, pengelompokan, dan referensi silang
+3. Penegakan kendala (misalnya dalam database otomotif, hanya mengizinkan satu jenis mesin per mobil)
+4. Versi antarmuka pemrograman aplikasi dari bahasa kueri, untuk kenyamanan programmer
+
+Penyimpanan
+
+Penyimpanan basis data adalah wadah perwujudan fisik basis data. Ini terdiri dari tingkat internal ( fisik) dalam arsitektur database. Ini juga berisi semua informasi yang dibutuhkan (misalnya, metadata , "data tentang data", dan struktur data internal ) untuk merekonstruksi tingkat konseptual dan tingkat eksternal dari tingkat internal bila diperlukan. Basis data sebagai objek digital mengandung tiga lapisan informasi yang harus disimpan: data, struktur, dan semantik. Penyimpanan yang tepat dari ketiga lapisan diperlukan untuk pelestarian masa depan dan umur panjang database. [32]Memasukkan data ke penyimpanan permanen umumnya merupakan tanggung jawab mesin basis data alias "mesin penyimpanan". Meskipun biasanya diakses oleh DBMS melalui sistem operasi yang mendasarinya (dan sering menggunakan sistem file sistem operasisebagai perantara untuk tata letak penyimpanan), properti penyimpanan dan pengaturan konfigurasi sangat penting untuk operasi DBMS yang efisien, dan dengan demikian dipelihara secara ketat oleh administrator basis data. Sebuah DBMS, saat beroperasi, selalu memiliki database yang berada di beberapa jenis penyimpanan (misalnya, memori dan penyimpanan eksternal). Data database dan informasi tambahan yang dibutuhkan, mungkin dalam jumlah yang sangat besar, dikodekan ke dalam bit. Data biasanya berada di penyimpanan dalam struktur yang terlihat sangat berbeda dari cara data melihat pada tingkat konseptual dan eksternal, tetapi dengan cara yang mencoba untuk mengoptimalkan (yang terbaik) rekonstruksi tingkat ini saat dibutuhkan oleh pengguna dan program, serta seperti untuk menghitung jenis informasi tambahan yang dibutuhkan dari data (misalnya, saat menanyakan database).
+
+Beberapa DBMS mendukung untuk menentukan pengkodean karakter mana yang digunakan untuk menyimpan data, sehingga beberapa penyandian dapat digunakan dalam database yang sama.
+
+Berbagai struktur penyimpanan database tingkat rendah digunakan oleh mesin penyimpanan untuk membuat serial model data sehingga dapat ditulis ke media pilihan. Teknik seperti pengindeksan dapat digunakan untuk meningkatkan kinerja. Penyimpanan konvensional berorientasi pada baris, tetapi ada juga database yang berorientasi kolom dan korelasi .
+
+Tampilan terwujud
+
+Seringkali redundansi penyimpanan digunakan untuk meningkatkan kinerja. Contoh umum adalah menyimpan tampilan terwujud , yang terdiri dari tampilan eksternal atau hasil kueri yang sering dibutuhkan. Menyimpan tampilan seperti itu menghemat komputasi yang mahal setiap kali dibutuhkan. Kelemahan dari tampilan yang terwujud adalah biaya tambahan yang dikeluarkan saat memperbaruinya agar tetap sinkron dengan data database asli yang diperbarui, dan biaya redundansi penyimpanan.
+
+Replikasi
+
+Kadang-kadang database menggunakan redundansi penyimpanan dengan replikasi objek database (dengan satu atau lebih salinan) untuk meningkatkan ketersediaan data (keduanya untuk meningkatkan kinerja beberapa akses pengguna akhir secara simultan ke objek database yang sama, dan untuk memberikan ketahanan dalam kasus kegagalan sebagian dari database terdistribusi). Pembaruan objek yang direplikasi perlu disinkronkan di seluruh salinan objek. Dalam banyak kasus, seluruh database direplikasi.
+
+keamanan
+
+Keamanan basis data berkaitan dengan semua aspek yang berbeda untuk melindungi konten basis data, pemiliknya, dan penggunanya. Ini berkisar dari perlindungan dari penggunaan database yang tidak sah yang disengaja hingga akses database yang tidak disengaja oleh entitas yang tidak berwenang (misalnya, seseorang atau program komputer).
+
+Kontrol akses basis data berkaitan dengan pengendalian siapa (seseorang atau program komputer tertentu) yang diizinkan untuk mengakses informasi apa dalam basis data. Informasi tersebut dapat terdiri dari objek database tertentu (misalnya, jenis catatan, catatan tertentu, struktur data), perhitungan tertentu atas objek tertentu (misalnya, jenis kueri, atau kueri tertentu), atau menggunakan jalur akses khusus ke yang sebelumnya (misalnya, menggunakan indeks tertentu). atau struktur data lainnya untuk mengakses informasi). Kontrol akses basis data ditetapkan oleh personel yang diberi wewenang khusus (oleh pemilik basis data) yang menggunakan antarmuka DBMS keamanan khusus yang dilindungi.
+
+Ini dapat dikelola secara langsung berdasarkan individu, atau dengan penugasan individu dan hak istimewa kepada kelompok, atau (dalam model yang paling rumit) melalui penugasan individu dan kelompok untuk peran yang kemudian diberikan hak. Keamanan data mencegah pengguna yang tidak berwenang melihat atau memperbarui database. Dengan menggunakan kata sandi, pengguna diizinkan mengakses seluruh basis data atau bagian darinya yang disebut "subskema". Misalnya, database karyawan dapat berisi semua data tentang karyawan individu, tetapi satu kelompok pengguna dapat diizinkan untuk hanya melihat data penggajian, sementara yang lain hanya diizinkan mengakses riwayat pekerjaan dan data medis. Jika DBMS menyediakan cara untuk memasukkan dan memperbarui database secara interaktif, serta menginterogasinya, kemampuan ini memungkinkan untuk mengelola database pribadi.
+
+Keamanan data secara umum berkaitan dengan melindungi potongan data tertentu, baik secara fisik (yaitu, dari korupsi, atau perusakan, atau penghapusan; misalnya, lihat keamanan fisik ), atau interpretasinya, atau bagiannya menjadi informasi yang berarti (misalnya, oleh melihat string bit yang terdiri, menyimpulkan nomor kartu kredit tertentu yang valid, misalnya, lihat enkripsi data ).
+
+Ubah dan akses catatan logging siapa yang mengakses atribut mana, apa yang diubah, dan kapan diubah. Layanan logging memungkinkan untuk audit database forensik nanti dengan menyimpan catatan kejadian akses dan perubahan. Terkadang kode tingkat aplikasi digunakan untuk merekam perubahan daripada meninggalkannya di database. Pemantauan dapat diatur untuk mencoba mendeteksi pelanggaran keamanan. Oleh karena itu, organisasi harus memperhatikan keamanan database dengan serius karena banyak manfaat yang diberikannya. Organisasi akan dilindungi dari pelanggaran keamanan dan aktivitas peretasan seperti intrusi firewall, penyebaran virus, dan ransom ware. Ini membantu melindungi informasi penting perusahaan, yang tidak dapat dibagikan dengan pihak luar dengan alasan apa pun.
+
+Transaksi dan konkurensi
+
+Transaksi database dapat digunakan untuk memperkenalkan beberapa tingkat toleransi kesalahan dan integritas data setelah pemulihan dari kerusakan . Transaksi basis data adalah unit kerja, biasanya merangkum sejumlah operasi di atas basis data (misalnya, membaca objek basis data, menulis, memperoleh atau melepaskan kunci , dll.), abstraksi yang didukung dalam basis data dan juga sistem lainnya. Setiap transaksi memiliki batasan yang jelas dalam hal eksekusi program/kode mana yang termasuk dalam transaksi tersebut (ditentukan oleh pemrogram transaksi melalui perintah transaksi khusus).
+
+Akronim ACID menjelaskan beberapa properti ideal dari transaksi basis data: atomisitas , konsistensi , isolasi , dan daya tahan .
+
+Migrasi
+
+Sebuah database yang dibangun dengan satu DBMS tidak portabel untuk DBMS lain (yaitu, DBMS lain tidak dapat menjalankannya). Namun, dalam beberapa situasi, diinginkan untuk memindahkan database dari satu DBMS ke yang lain. Alasan utamanya adalah ekonomis (DBMS yang berbeda mungkin memiliki total biaya kepemilikan yang berbedaatau TCO), fungsional, dan operasional (DBMS yang berbeda mungkin memiliki kemampuan yang berbeda). Migrasi melibatkan transformasi database dari satu tipe DBMS ke tipe lainnya. Transformasi harus memelihara (jika mungkin) aplikasi terkait database (yaitu, semua program aplikasi terkait) tetap utuh. Dengan demikian, tingkat arsitektur konseptual dan eksternal database harus dipertahankan dalam transformasi. Mungkin diinginkan juga bahwa beberapa aspek dari tingkat internal arsitektur dipertahankan. Migrasi database yang kompleks atau besar mungkin merupakan proyek yang rumit dan mahal (satu kali) dengan sendirinya, yang harus diperhitungkan dalam keputusan untuk bermigrasi. Ini terlepas dari kenyataan bahwa alat mungkin ada untuk membantu migrasi antara DBMS tertentu. Biasanya, vendor DBMS menyediakan alat untuk membantu mengimpor database dari DBMS populer lainnya.
+
+Membangun, memelihara, dan menyetel
+
+Setelah merancang database untuk suatu aplikasi, tahap selanjutnya adalah membangun database. Biasanya, DBMS tujuan umum yang sesuai dapat dipilih untuk digunakan untuk tujuan ini. Sebuah DBMS menyediakan antarmuka pengguna yang diperlukan untuk digunakan oleh administrator database untuk menentukan struktur data aplikasi yang dibutuhkan dalam model data masing-masing DBMS. Antarmuka pengguna lain digunakan untuk memilih parameter DBMS yang diperlukan (seperti terkait keamanan, parameter alokasi penyimpanan, dll.).
+
+Ketika database sudah siap (semua struktur data dan komponen lain yang diperlukan telah ditentukan), biasanya diisi dengan data aplikasi awal (inisialisasi database, yang biasanya merupakan proyek yang berbeda; dalam banyak kasus menggunakan antarmuka DBMS khusus yang mendukung penyisipan massal) sebelum menjadikannya operasional. Dalam beberapa kasus, database menjadi operasional saat kosong dari data aplikasi, dan data terakumulasi selama operasinya.
+
+Setelah database dibuat, diinisialisasi dan diisi, perlu dipelihara. Berbagai parameter database mungkin perlu diubah dan database mungkin perlu disetel ( tuning ) untuk kinerja yang lebih baik; struktur data aplikasi dapat diubah atau ditambahkan, program aplikasi terkait baru dapat ditulis untuk menambah fungsionalitas aplikasi, dll.
+
+Cadangkan dan pulihkan
+
+Kadang-kadang diinginkan untuk mengembalikan database ke keadaan sebelumnya (karena berbagai alasan, misalnya, kasus ketika database ditemukan rusak karena kesalahan perangkat lunak, atau jika telah diperbarui dengan data yang salah). Untuk mencapai hal ini, operasi pencadangan dilakukan sesekali atau terus-menerus, di mana setiap keadaan basis data yang diinginkan (yaitu, nilai datanya dan penyematannya dalam struktur data basis data) disimpan dalam file cadangan khusus (ada banyak teknik untuk melakukan ini secara efektif). Ketika diputuskan oleh administrator database untuk membawa database kembali ke keadaan ini (misalnya, dengan menentukan keadaan ini dengan titik waktu yang diinginkan ketika database berada dalam keadaan ini), file-file ini digunakan untuk memulihkan keadaan itu.
+
+Analisis statis
+
+Teknik analisis statis untuk verifikasi perangkat lunak dapat diterapkan juga dalam skenario bahasa query. Secara khusus, * Kerangka interpretasi abstrak telah diperluas ke bidang bahasa kueri untuk database relasional sebagai cara untuk mendukung teknik perkiraan suara. [34] Semantik bahasa query dapat disetel sesuai dengan abstraksi yang sesuai dari domain konkret data. Abstraksi sistem database relasional memiliki banyak aplikasi yang menarik, khususnya, untuk tujuan keamanan, seperti kontrol akses yang halus, watermarking, dll.
+
+Fitur lain-lain
+
+Fitur DBMS lainnya mungkin termasuk:
+
+1. Log basis data – Ini membantu menyimpan riwayat fungsi yang dijalankan.
+2. Komponen grafik untuk menghasilkan grafik dan bagan, terutama dalam sistem gudang data.
+3. Pengoptimal kueri – Melakukan optimisasi kueri pada setiap kueri untuk memilih rencana kueri yang efisien (urutan parsial (pohon) operasi) yang akan dieksekusi untuk menghitung hasil kueri. Mungkin khusus untuk mesin penyimpanan tertentu.
+4. Alat atau kait untuk desain basis data, pemrograman aplikasi, pemeliharaan program aplikasi, analisis dan pemantauan kinerja basis data, pemantauan konfigurasi basis data, konfigurasi perangkat keras DBMS (DBMS dan basis data terkait dapat menjangkau komputer, jaringan, dan unit penyimpanan) dan pemetaan basis data terkait (terutama untuk DBMS terdistribusi), alokasi penyimpanan dan pemantauan tata letak basis data, migrasi penyimpanan, dll.
+Semakin banyak, ada panggilan untuk sistem tunggal yang menggabungkan semua fungsi inti ini ke dalam kerangka pembangunan, pengujian, dan penyebaran yang sama untuk manajemen basis data dan kontrol sumber. Meminjam dari perkembangan lain dalam industri perangkat lunak, beberapa menawarkan penawaran seperti " DevOps untuk database".
+
+desain dan permodelan
+
+Tugas pertama perancang basis data adalah menghasilkan model data konseptual yang mencerminkan struktur informasi yang akan disimpan dalam basis data. Pendekatan umum untuk ini adalah mengembangkan model hubungan entitas , seringkali dengan bantuan alat gambar. Pendekatan populer lainnya adalah Unified Modeling Language. Model data yang berhasil akan secara akurat mencerminkan kemungkinan keadaan dunia luar yang dimodelkan: misalnya, jika orang dapat memiliki lebih dari satu nomor telepon, itu akan memungkinkan informasi ini ditangkap. Merancang model data konseptual yang baik membutuhkan pemahaman yang baik tentang domain aplikasi; biasanya melibatkan mengajukan pertanyaan mendalam tentang hal-hal yang menarik bagi suatu organisasi, seperti "dapatkah pelanggan juga menjadi pemasok?", Atau "jika suatu produk dijual dengan dua bentuk kemasan yang berbeda, apakah itu produk yang sama atau produk yang berbeda? ", atau "jika sebuah pesawat terbang dari New York ke Dubai melalui Frankfurt, apakah itu satu atau dua penerbangan (atau bahkan mungkin tiga)?". Jawaban atas pertanyaan-pertanyaan ini menetapkan definisi terminologi yang digunakan untuk entitas (pelanggan, produk, penerbangan,
+
+Memproduksi model data konseptual terkadang melibatkan masukan dari proses bisnis , atau analisis alur kerja dalam organisasi. Ini dapat membantu untuk menetapkan informasi apa yang dibutuhkan dalam database, dan apa yang dapat ditinggalkan. Misalnya, ini dapat membantu ketika memutuskan apakah database perlu menyimpan data historis serta data saat ini.
+
+Setelah menghasilkan model data konseptual yang disukai pengguna, tahap selanjutnya adalah menerjemahkannya ke dalam skema yang mengimplementasikan struktur data yang relevan di dalam database. Proses ini sering disebut desain database logis, dan outputnya adalah model data logis yang dinyatakan dalam bentuk skema. Sedangkan model data konseptual (dalam teori setidaknya) independen dari pilihan teknologi database, model data logis akan dinyatakan dalam model database tertentu yang didukung oleh DBMS yang dipilih. (Istilah model data dan model basis data sering digunakan secara bergantian, tetapi dalam artikel ini kami menggunakan model data untuk desain basis data tertentu, dan model basis datauntuk notasi pemodelan yang digunakan untuk mengekspresikan desain itu).
+
+Model database yang paling populer untuk database tujuan umum adalah model relasional, atau lebih tepatnya, model relasional yang diwakili oleh bahasa SQL. Proses pembuatan desain database logis menggunakan model ini menggunakan pendekatan metodis yang dikenal sebagai normalisasi . Tujuan normalisasi adalah untuk memastikan bahwa setiap "fakta" dasar hanya dicatat di satu tempat, sehingga penyisipan, pembaruan, dan penghapusan secara otomatis menjaga konsistensi.
+
+Tahap akhir dari desain database adalah membuat keputusan yang mempengaruhi kinerja, skalabilitas, pemulihan, keamanan, dan sejenisnya, yang bergantung pada DBMS tertentu. Ini sering disebut desain database fisik , dan outputnya adalah model data fisik . Tujuan utama selama tahap ini adalah kemandirian data , yang berarti bahwa keputusan yang dibuat untuk tujuan pengoptimalan kinerja harus tidak terlihat oleh pengguna akhir dan aplikasi. Ada dua jenis independensi data: independensi data fisik dan independensi data logis. Desain fisik didorong terutama oleh persyaratan kinerja, dan membutuhkan pengetahuan yang baik tentang beban kerja yang diharapkan dan pola akses, dan pemahaman mendalam tentang fitur yang ditawarkan oleh DBMS yang dipilih.
+
+Aspek lain dari desain database fisik adalah keamanan. Ini melibatkan baik mendefinisikan kontrol akses ke objek database serta mendefinisikan tingkat keamanan dan metode untuk data itu sendiri.
+
+Model
+
+Model database adalah jenis model data yang menentukan struktur logis dari database dan secara fundamental menentukan cara data dapat disimpan, diatur, dan dimanipulasi. Contoh paling populer dari model database adalah model relasional (atau pendekatan SQL dari relasional), yang menggunakan format berbasis tabel.
+
+Pandangan eksternal, konseptual, dan internal
+
+Tampilan data tradisional [36]
+Sistem manajemen basis data menyediakan tiga tampilan data basis data:
+
+Tingkat eksternal mendefinisikan bagaimana setiap kelompok pengguna akhir melihat organisasi data dalam database. Sebuah database tunggal dapat memiliki sejumlah tampilan di tingkat eksternal.
+Tingkat konseptual menyatukan berbagai pandangan eksternal ke dalam pandangan global yang kompatibel. [37] Ini memberikan sintesis dari semua pandangan eksternal. Ini berada di luar jangkauan berbagai pengguna akhir basis data, dan lebih menarik bagi pengembang aplikasi basis data dan administrator basis data.
+Tingkat internal (atau tingkat fisik ) adalah organisasi internal data di dalam DBMS. Hal ini berkaitan dengan biaya, kinerja, skalabilitas dan hal-hal operasional lainnya. Ini berkaitan dengan tata letak penyimpanan data, menggunakan struktur penyimpanan seperti indeks untuk meningkatkan kinerja. Kadang-kadang menyimpan data pandangan individu (tampilan terwujud ), dihitung dari data umum, jika ada pembenaran kinerja untuk redundansi tersebut. Ini menyeimbangkan semua persyaratan kinerja tampilan eksternal, mungkin bertentangan, dalam upaya untuk mengoptimalkan kinerja keseluruhan di semua aktivitas.
+Meskipun biasanya hanya ada satu tampilan data konseptual (atau logis) dan fisik (atau internal), ada sejumlah tampilan eksternal yang berbeda. Hal ini memungkinkan pengguna untuk melihat informasi database dengan cara yang lebih terkait dengan bisnis daripada dari sudut pandang pemrosesan teknis. Misalnya, departemen keuangan perusahaan memerlukan rincian pembayaran semua karyawan sebagai bagian dari pengeluaran perusahaan, tetapi tidak memerlukan rincian tentang karyawan yang menjadi kepentingan departemen sumber daya manusia . Jadi departemen yang berbeda membutuhkan pandangan yang berbeda dari database perusahaan.
+
+Arsitektur database tiga tingkat berhubungan dengan konsep independensi data yang merupakan salah satu kekuatan pendorong awal utama dari model relasional. Idenya adalah bahwa perubahan yang dibuat pada tingkat tertentu tidak mempengaruhi pandangan pada tingkat yang lebih tinggi. Misalnya, perubahan di tingkat internal tidak memengaruhi program aplikasi yang ditulis menggunakan antarmuka tingkat konseptual, yang mengurangi dampak pembuatan perubahan fisik untuk meningkatkan kinerja.
+
+Pandangan konseptual memberikan tingkat tipuan antara internal dan eksternal. Di satu sisi menyediakan pandangan umum dari database, independen dari struktur tampilan eksternal yang berbeda, dan di sisi lain itu mengabstraksikan detail tentang bagaimana data disimpan atau dikelola (tingkat internal). Pada prinsipnya setiap level, dan bahkan setiap tampilan eksternal, dapat disajikan dengan model data yang berbeda. Dalam prakteknya biasanya DBMS yang diberikan menggunakan model data yang sama untuk tingkat eksternal dan konseptual (misalnya, model relasional). Level internal, yang tersembunyi di dalam DBMS dan bergantung pada implementasinya, memerlukan level detail yang berbeda dan menggunakan tipe tipe struktur datanya sendiri.
+
+Memisahkan tingkat eksternal , konseptual dan internal adalah fitur utama dari implementasi model database relasional yang mendominasi database abad ke-21.
+
+Foo

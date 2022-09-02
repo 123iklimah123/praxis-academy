@@ -29,7 +29,7 @@ try:
 
     curs = conn.cursor()
 
-    namaLama = 'ika'
+    namaLama = ''
 
     namaBaru = 'mark'
     umurBaru = 24
