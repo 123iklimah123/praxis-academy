@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,65 +8,62 @@
     <title>Document</title>
     <style>
         table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
 
-td, th {
-    border: 1px solid  #dddddd;
-    text-align: left;
-    padding: 8px;
-}
+        td, 
+        th {
+            border: 1px solid  #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
 
-tr:nth-child(even) {
-    background-color:   #dddddd
-}
-</style>
-
+        tr:nth-child(even) {
+            background-color:   #dddddd
+        }
+    </style>
 </head>
+
 <body>
     <div>
-        <h1> ini request </h1>
+        <h1>ini request</h1>
         <form action="" method="post">
-            <label for="">nama</label>
-            <input name="nama" type="text" required>
-            label for="">detail</label>
-            <input name="detail" type="text" required>
+            <input name="nama" type="text" <required>
+            <input name="detail" type="text" <required>
             <button type="submit">kirim</button>
 
         </form>
 
         <hr>
-        <h1>ini respons</h1>
+        <h1>ini response</h1>
         <br>
         <table>
             <tr>
-                <th>id<th>
+                <th>id</th>
                 <th>nama</th>
                 <th>actions</th>
                 <!--<th>detail</th>-->>
             </tr>
             {% for d in context %}
-        <tr>
-            <td>{{d[0]}}</td>
-            <td>{{d[1]}}</td>
-            <td>
-                <a href="/detail/{{d[0]}}">
+            <tr>
+                <td>{{d[0]}}</td>
+                <td>{{d[1]}}</td>
+                <td>
+                    <a href="/detail/{{d[0]}}">
                     <button>detail</button>
-                <a>
-                <a href="">
+                    <a>
+                    <a href="">
                     <button>update</button>
-                </a>
-                <a href="">
+                    </a>
+                    <a href="/delete/{{d[0]}}">
                     <button>delete</button>
-                </a>
-            </td>
-            <!--<td>{{d[2]}}</td-->
-        </tr>
+                    </a>
+                </td>
+            </tr>
             {% endfor %}
         </table>
-
     </div>
 </body>
 </html>
