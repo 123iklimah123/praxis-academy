@@ -44,21 +44,22 @@
                 <th>id</th>
                 <th>nama</th>
                 <th>actions</th>
-                <!--<th>detail</th>-->>
+                <!--<th>detail</th>-->
             </tr>
             {% for d in context %}
             <tr>
-                <td>{{d[0]}}</td>
+                <td>{{loop.index}}</td>
+                <!-- <td>{{d[0]}}</td> -->
                 <td>{{d[1]}}</td>
                 <td>
                     <a href="/detail/{{d[0]}}">
-                    <button>detail</button>
-                    <a>
+                         <button class="btn btn-info">detail</button>
+                    </a>
                     <a href="/update/{{d[0]}}">
-                    <button>update</button>
+                        <button class="btn btn-warning">update</button> 
                     </a>
                     <a href="/delete/{{d[0]}}">
-                    <button>delete</button>
+                        <button class="btn btn-danger">delete</button> 
                     </a>
                 </td>
             </tr>

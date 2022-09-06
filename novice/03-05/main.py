@@ -67,7 +67,7 @@ def delete(buah_id):
     conn.close()
     return redirect("/")
    
-@app.route("/update/<buah_id>")
+@app.route("/update/<buah_id>", methods=["GET", "POST"])
 def update(buah_id):
     conn = psycopg2.connect(
         host="localhost",
@@ -76,14 +76,24 @@ def update(buah_id):
         password="allah1"
     )
     curs = conn.cursor()
-    namaLama = 'doren'
-    namaBaru = 'mangges'
-    detailBaru = 'kene'
-    query = f"update buah set nama='{namaBaru}', detail='{detailBaru}' where nama = '{namaLama}'"
+    if request.method == "POST":
+        nama = request.form.get("nama")
+        detail = request.form.get("detail")
+        query = f"update buah set nama='{nama}', detail='{detail}' where id = {buah_id}"
+        curs.execute(query)
+        conn.commit()
+        # print("data masuk")
+        return redirect("/")
+
+    # namaLama = 'nangka'
+    namaBaru = 'labyu'
+    detailBaru = 'awuuuw'
+    query = f"select *  from buah where id = '{buah_id}'"
     curs.execute(query)
+    data = curs.fetchone()
     conn.commit()
     print("data masuk")
-    return redirect("/")
+    return render_template("update.html", context=data)
 
 if __name__ == "__main__":
     app.run()
