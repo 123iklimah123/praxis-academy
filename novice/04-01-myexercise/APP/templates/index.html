@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Data Santri Qaryatus Salam (QS) yang sudah vaksin</title>
+
+           <style>
+             table, th, td {
+               border: 1px solid  black;
+             }
+            </style>
+<body>
+    <div>
+        <h1>ini Data Santri yang sudah vaksin</h1>
+        <form action="" method="post">
+            nama lengkap <input name="nama" type="text" required>
+            <br>
+            umur santri <input name="umur" type="umur" required>
+            <br>
+            jumlah_vaksin <input name="jumlah vaksin" type="jumlah vaksin" required>
+            <br>
+            <button type="submit">KIRIM</button>
+           </form>
+
+              <hr>
+
+              <h1>Data Santri:</h1>
+              <br>
+              <table>
+
+              <table style="width: 500px"
+               <tr>
+                <th>id</th>
+                <th>nama</th>
+                <th>umur</th>
+                <th>jumlah_vaksin</th>
+                <th>keterangan</th>
+                <!--<th>detail</th>-->
+               </tr>
+               {% for d in context %}
+               <tr>
+                 <td>{{loop.index}}</td>
+                 <td>{{d[1]}}</td>
+                 <td>{{d[2]}}</td>
+                 <td>{{d[3]}}</td>
+                 <td>
+                    <a href="/detail/{{d[0]}}">
+                         <button class="btn btn-info">detail</button>
+                    </a>
+                    <a href="/update/{{d[0]}}">
+                        <button class="btn btn-warning">update</button> 
+                    </a>
+                    <a href="/delete/{{d[0]}}">
+                        <button class="btn btn-danger">delete</button> 
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+
+        <hr>
+        <h1>Data Santri:</h1>
+        {{content}}
+        <br>
+        {% for d in context %}
+        <ul>
+            <li>{{d}}</li>
+        <ul>
+            {% endfor}
+
+    </div>
+
+
+</body>
+</html>
