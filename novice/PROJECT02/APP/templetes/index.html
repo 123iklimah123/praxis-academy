@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Data Santri Qaryatus Salam (QS) yang sudah vaksin</title>
+    <title>REKAM JEJAK PERBENDAHARAAN PONDOK QS BATCH 2</title>
 
            <style>
              table, th, td {
@@ -13,30 +13,35 @@
             </style>
 <body>
     <div>
-        <h1>ini Data Santri yang sudah vaksin</h1>
+        <h1>ARUS KAS PONDOK</h1>
         <form action="" method="post">
-            nama lengkap <input name="nama" type="text" required>
+            tanggal <input name="tanggal" type="text" required>
             <br>
-            umur santri <input name="umur" type="umur" required>
+            keterangan <input name="keterangan" type="keterangan" required>
             <br>
-            jumlah_vaksin <input name="jumlah vaksin" type="jumlah vaksin" required>
+            pemasukan <input name="pemasukan" type="pemasukan" required>
+            <br>
+            pengeluaran <input name="pengeluaran" type="pengeluaran" required>
+            <br>
+            saldo <input name="saldo" type="saldo" required>
             <br>
             <button type="submit">KIRIM</button>
            </form>
 
               <hr>
 
-              <h1>Data Santri:</h1>
+              <h1>TENTANG PERBENDAHARAAN:</h1>
               <br>
               <table>
 
               <table style="width: 500px"
                <tr>
                 <th>id</th>
-                <th>nama</th>
-                <th>umur</th>
-                <th>jumlah_vaksin</th>
+                <th>tanggal</th>
                 <th>keterangan</th>
+                <th>pemasukan</th>
+                <th>pengeluaran</th>
+                <th>saldo</th>
                 <!--<th>detail</th>-->
                </tr>
                {% for d in context %}
@@ -45,6 +50,8 @@
                  <td>{{d[1]}}</td>
                  <td>{{d[2]}}</td>
                  <td>{{d[3]}}</td>
+                 <td>{{d[4]}}</td>
+                 <td>{{d[5]}}</td>
                  <td>
                     <a href="/detail/{{d[0]}}">
                          <button class="btn btn-info">detail</button>
@@ -60,7 +67,7 @@
             {% endfor %}
 
         <hr>
-        <h1>Data Santri:</h1>
+        <h1>Penampakannya:</h1>
         {{content}}
         <br>
         {% for d in context %}

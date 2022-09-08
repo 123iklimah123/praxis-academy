@@ -18,7 +18,7 @@ def index():
         umur = request.form.get("umur")
         jumlah_vaksin = request.form.get("jumlah_vaksin")
         keterangan = request.form.get("keterangan")
-        query = f"insert into santri(nama, umur, jumlah_vaksin, keterangan) values('{nama}', '{umur}', '{jumlah_vaksin}', '{umur}')"
+        query = f"insert into santri(nama, umur, jumlah_vaksin, keterangan) values('{nama}', '{umur}', '{jumlah_vaksin}', '{keterangan}')"
         curs.execute(query)
         conn.commit()
        
@@ -78,7 +78,7 @@ def update (santri_id):
         umur = request.form.get("umur")
         jumlah_vaksin = request.form.get("jumlah_vaksin")
         keterangan = request.form.get("keterangan")
-        query = f"update santri set nama = '{nama}', umur = '{umur}', jumlah_vaksin = '{jumlah_vaksin}', keterangan = '{umur}' where id = {santri_id}"
+        query = f"update santri set nama = '{nama}', umur = '{umur}', jumlah_vaksin = '{jumlah_vaksin}', keterangan = '{keterangan}' where id = {santri_id}"
         curs.execute(query)
         conn.commit()
         # print("data masuk")

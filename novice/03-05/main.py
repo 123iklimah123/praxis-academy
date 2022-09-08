@@ -69,6 +69,34 @@ def delete(buah_id):
    
 @app.route("/update/<buah_id>", methods=["GET", "POST"])
 def update(buah_id):
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     conn = psycopg2.connect(
         host="localhost",
         database="contoh",  
