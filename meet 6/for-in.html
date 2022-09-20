@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName: 'Iqliemah',
+            middleName: 'Putry',
+            lastName: 'Murady'
+        }
+
+        for (const property in person) {
+            console.log(`Property ${property}:${person[property]}`);
+        }
+
+        // array
+        // const names = ['Iqliemah', 'Putry', 'Murady'];
+
+        // for (const index in names) {
+        //     document.writeln(`<p>index ${index}: ${names[index]}</p>`);
+        // }
+        //simpan 4 nama anda 
+        const names = ['Tini', 'Tono', 'Toni', 'Tino'];
+
+        for (const index in names) {
+            document.writeln(`<p>index ${index}: ${names[index]}</p>`);
+        }
+
+        const names = ['Tini', 'Tono', 'Toni', 'Tino'];
+    </script>
+</body>
+</html>

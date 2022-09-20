@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+// if(false) {
+//     document.writeln('ini jalan');
+// } else if(false) {
+//     document.writeln(kondisi 2);
+// }
+// } else {
+//     document.writeln('sisanya ini');
+// }
+
+    // const examValue = 50;
+    // if (examValue > 80) {
+    //     document.writeln("<p>Good Job : A</p>");
+    // } else if (examValue > 70) {
+    //     document.writeln("<p>Good Job : B</p>");
+    // } else if (examValue > 60) {
+    //     document.writeln("<p>Good Job : C</p>");
+    // } else {
+    //     document.writeln("<p>Try Again Next Year</p>");
+    // }
+
+
+// const examValue = 90;
+
+// if (examValue > 80) {
+//     document.writeln("<p>dapat A</p>");
+// } else if (examValue < 80) {
+//     document.writeln("<p>yah gak jadi dapat A</p>");
+// }
+
+
+// c
+// cara iik
+// const name = prompt("siapa nama anda?");
+// const examValue = prompt("berapa nilai anda?");
+
+// isNaN(examValue) 
+// document.writeln(`<p>Hi <b>${name}</b>, nilaimu <b>${examValue}</b> jangan nakal ya, maaf nilai yang diinput tidak valid</p>`);// isNaN = apakah bukan angka? True / False
+// alert("jangan nakal ya(`<p><b>${name})</b></p>`) maaf nilai yang diinput tidak valid");
+
+// if (examValue > 80) {
+//         document.writeln(`<p>Hi <b>${name}</b>, nilaimu <b>${examValue}</b> jadi Good Job : A</p>`);
+//     } else if (examValue > 70) {
+//         document.writeln(`<p>Hi <b>${name}</b>, nilaimu <b>${examValue}</b> jadi Good Job : B</p>`);
+//     } else if (examValue > 60) {
+//         document.writeln(`<p>Hi <b>${name}</b>, nilaimu <b>${examValue}</b> jadi Good Job : C</p>`);
+//     } else {
+//         document.writeln(`<p>Hi <b>${name}</b>, nilaimu <b>${examValue}</b> jadi try again</p>`);
+//     }
+    // //cara dari mas Ulul 1
+    // const name = prompt("siapa nama anda?");
+    // const examValue = prompt("berapa nilai anda?");
+
+    // if (isNaN(examValue)) {
+    //     alert(`jangan nakal ya ${name}, maaf nilai yang diinput tidak valid`);
+    // } else if (examValue > 80) {
+    //     document.writeln(`<p>Hi <b>${name}</b>, nilaimu <b>${examValue}</b> jadi Good Job : A</p>`);    
+    // } else if (examValue > 70) {
+    //     document.writeln(`<p>Hi <b>${name}</b>, nilaimu <b>${examValue}</b> jadi Good Job : B</p>`);
+    // } else if (examValue > 60) {
+    //    document.writeln(`<p>Hi <b>${name}</b>, nilaimu <b>${examValue}</b> jadi Good Job : C</p>`);
+    // } else {
+    //    document.writeln(`<p>Hi <b>${name}</b>, nilaimu <b>${examValue}</b> jadi try again</p>`);
+   // }
+
+// // cara 2
+    const name = prompt("siapa nama anda?");
+    const examValue = prompt("berapa nilai anda?");
+    
+    if(isNaN(examValue)) {
+        alert(`jangan nakal ya ${name}, maaf nilai yang diinput tidak valid`);
+        } else {
+    if (examValue > 80) 
+        document.writeln(`<p>Hi <b>${name}</b>, nilaimu <b>${examValue}</b> jadi Good Job : A</p>`);
+        } else if (examValue > 70) {    
+         document.writeln(`<p>Hi <b>${name}</b>, nilaimu <b>${examValue}</b> jadi Good Job : B</p>`);
+        } else if (examValue > 60) {
+        document.writeln(`<p>Hi <b>${name}</b>, nilaimu <b>${examValue}</b> jadi Good Job : C</p>`);
+        } else {
+        document.writeln(`<p>Hi <b>${name}</b>, nilaimu <b>${examValue}</b> jadi try again</p>`);
+        }
+    }
+</script>    
+</body>
+</html>

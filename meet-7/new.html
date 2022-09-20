@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function loopNilai(nilai1, nilai2) {
+    let hasil_perulangan = "";
+    nilai1 = parseInt(nilai1);
+    nilai2 = parseInt(nilai2);
+    for (nilai1; nilai1<=nilai2; nilai1++){
+        hasil_perulangan += ` ${nilai1}`;
+        console.log('ok');
+        }
+    return hasil_perulangan;
+        }
+    let nilai1 = prompt("masukkan dari nilai berapa?"); 
+    let nilai2 = prompt("masukkan sampai nilai berapa?"); 
+    let hasil = loopNilai("nilai1, nilai2"); 
+    document.writeln(`hasilnya adalah : ${hasil}`);
+    </script>
+</body>
+</html>

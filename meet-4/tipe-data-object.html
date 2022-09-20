@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const orang = {};
+
+    //menambah atau mengubah
+    orang["nama"] = "Iqliemah Putry";
+    orang["alamat"] = "Madura";
+    orang["umur"] = 25;
+
+    // menghapus
+    delete orang["umur"];
+
+    console.table(orang);
+
+    //penulisan lain or cara 1
+    const people = {
+        nama: "Iqliemah putry",
+        alamat: "Madura",
+        umur: 25
+    };
+
+    console.table(people);
+
+    const id = {
+        'nama lengkap' : "iqliemah",
+        "No Telp"      : "082301088875",
+        alamat         : "Madura",
+        umur           : 25
+    }
+    // ubah property / attribute
+    let person              = {}
+    person["nama"]          = "iqliemah";
+    person["alamat"]        = "Madura";
+    person["umur"]          = 25;
+    person["No Telp"]       =082301088875
+
+    console.info(`nama : ${id["nama lengkap"]}`);
+    console.info(`No Telp : ${id['No Telp']}`);
+    console.info(`alamat : ${id.alamat}`);
+    console.info(`umur : ${id.umur}`);
+
+    console.table(id);
+
+    delete orang["umur"];
+
+    console.table(orang);
+</script>
+</body>
+</html>
