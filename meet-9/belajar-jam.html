@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jamkuh</title>
+  <style>
+    .clock {
+        /* general clock vars */
+        --hour-hand-color: #000;
+        --hour-hand-degrees: 0deg;
+        --minute-hand-color: #000;
+        --minute-hand-degrees: 0deg;
+        --second-hand-color: hotpink;
+        --second-hand-degrees: 0deg;
+        position: relative;
+        min-width: 320px;
+        width: 25vw;
+        height: 25vw;
+        min-height: 320px;
+        border-radius: 50%;
+        margin: 0 auto;
+        border: 7px solid #000;
+      }
+      
+      /* clock hands */
+      .hand {
+        position: absolute;
+        left: 50%;
+        bottom: 50%;
+        height: 45%;
+        width: 4px;
+        margin-left: -2px;
+        background: var(--second-hand-color);
+        border-radius: 6px;
+        transform-origin: bottom center;
+        transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+      }
+      
+      .second-hand {
+        transform: rotate(var(--second-hand-degrees));
+      }
+      
+      .hour-hand {
+        height: 35%;
+        border-radius: 40px;
+        background-color: var(--hour-hand-color);
+        transform: rotate(var(--hour-hand-degrees));
+      }
+      
+      .minute-hand {
+        height: 50%;
+        background: var(--minute-hand-color);
+        transform: rotate(var(--minute-hand-degrees));
+      }
+    </style>
+</head>
+
+<body>
+    <div class="clock" id="clock">
+        <div class="hand hour-hand"></div>
+        <div class="hand minute-hand"></div>
+        <div class="hand second-hand"></div>
+      </div> 
+ <script>
+    const clock = document.getElementById("clock");
+function setDate() {
+  // Get time
+  const now = new Date();
+
+  // Set clock hands angles
+  const secondsAngle = now.getSeconds() * 6; //60 * 6 = 360;
+  const minsAngle = now.getMinutes() * 6 + secondsAngle / 60;
+  // Same calculation as seconds but add a bit of angle for more accuracy based on second count
+  const hourAngle = ((now.getHours() % 12) / 12) * 360 + minsAngle / 12;
+  /* example hour calculation 23h
+  remainder of 23 = 11
+  11 / 12 = 0.916
+  0.916 * 360 = 330(deg)
+  (+ add the minute angle devided by 12 for more accuracy)
+  */
+
+  // Set the hands angles in css variables
+  clock.style.setProperty("--second-hand-degrees", secondsAngle + "deg");
+
+  clock.style.setProperty("--minute-hand-degrees", minsAngle + "deg");
+
+  clock.style.setProperty("--hour-hand-degrees", hourAngle + "deg");
+}
+
+// Tick tick tick
+setInterval(setDate, 1000);
+
+setDate();
+
+ </script>
+</body>
+</html>

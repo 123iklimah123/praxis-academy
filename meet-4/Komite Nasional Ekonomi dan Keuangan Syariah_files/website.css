@@ -1,0 +1,41 @@
+@font-face {
+  font-family: DINNextLTPro;
+  src: url('../fonts/DINNextLTPro-Light.otf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: DINNextLTPro;
+  src: url('../fonts/DINNextLTPro-Regular.otf');
+  font-weight: normal; /*400*/
+}
+
+@font-face {
+  font-family: DINNextLTPro;
+  src: url('../fonts/DINNextLTPro-Medium.otf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: DINNextLTPro;
+  src: url('../fonts/DINNextLTPro-Bold.otf');
+  font-weight: bold; /*700*/
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url('../fonts/Gilroy-Medium.otf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url('../fonts/OpenSans-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url('../fonts/OpenSans-Semibold.ttf');
+  font-weight: 600;
+}
