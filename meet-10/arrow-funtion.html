@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const SayHello = (name) => {
+        //     const say = `Hello $(name)`;
+        //     console.info(say);
+        // }
+
+        // SayHello("Ika");
+
+        //const SayHello = (name) => console.info(`Hello ${name}`);
+        //SayHello("ika");
+
+       // const sum = (first, second) => {
+         //   return first + second;
+        //}
+
+        const sum = (first, second) => first + second;
+        console.info(sum(100, 100));
+
+        function giveMeName(callback){
+            callback("Ika")
+        }
+      // Anonymous Function
+      // giveMeName(function (name) {
+        //  console.info(`hello ${name}`);
+      // })
+      
+        
+
+
+
+
+        //arrow function
+        giveMeName(name => console.info(`hello ${name}`));
+
+        function createAdder(value){
+            const owner = "ika";
+
+            function add(param){
+                console.info(owner);
+                return value + param;
+            }
+
+            return add;
+        }
+
+        const addTwo = createAdder(2);
+        // function addTwo(param){
+        //  console.info("ika");
+        //    return 2 + param;
+       // }
+       console.info(addTwo(10));
+       console.info(addTwo(10));
+
+       const addTen = createAdder(10);
+    </script>
+</body>
+</html>

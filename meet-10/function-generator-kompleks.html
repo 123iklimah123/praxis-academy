@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function* buatGanjil(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 ===1) {
+                    yield i;
+                }
+            }
+        }
+
+        const angkaGanjil = buatGanjil(100);
+        for (const angka of angkaGanjil) {
+            console.info(angka);
+        }
+
+        //  const numbers = buatGanjil(100);
+        //  for (const number of numbers) {
+        //     console.info(number);
+        //  }
+
+        // eager
+        function buatGanjilArray(value) [
+            const result = [];
+            for (let i = 1; i <=value) {
+                const result = [];
+
+            }
+        ]
+            const result = 
+        }
+
+
+        const number = buatGanjil(100);
+        // for (const number of numbers) {
+        //   console.info(numbers);
+        //}
+        console.info(numbers.next())
+    </script>
+</body>
+</html>

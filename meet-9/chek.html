@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codepen</title>
+    <div id="look-area"></div>
+    <div class="text">codepen</div>
+</head>
+    <body>
+        <style type="text/css">
+            root {
+                xAxis: 0px;
+                yAxis: 0px;
+            }
+              
+            body {
+                min-height: 100vh;
+                margin: 0;
+                background: black;
+                overflow: hidden;
+            }
+              
+              #look-area {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 20vw;
+                height: 20vw;
+                background: radial-gradient(closest-side, white 10%, transparent);
+                background-repeat: no-repeat;
+                transform: translate(var(--xAxis), var(--yAxis));
+                transition: transform .2s ease-out;
+            }
+              
+              .text {
+                display: inline-block;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                mix-blend-mode: difference;
+                font-size: 40px;
+                font-weight: 700;
+                
+            }
+        </style>
+    </body>
+<script>
+    const spotlight = 
+    document.getElementById("look-area");
+    document.addEventListener ('mousemove', event=>{
+    
+    const xAxis = (event.clientX - 
+    spotlight.clientWidth / 2),
+    yAxis = (event.clientY - spotlight.clientHeight / 2);
+      
+    spotlight.style.setProperty ('--xAxis', `${xAxis}px`);
+    spotlight.style.setProperty('--yAxis', `${yAxis}px`);
+
+    })
+</script>
+</body>
+</html>
