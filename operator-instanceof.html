@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee {
+
+        }
+        //class Manager
+        //}
+
+        class Manager extends Employee {
+
+        }
+
+        const budi = new Employee();
+        console.info(typeof budi);// object
+        console.info(budi instanceof Employee); // true
+        console.info(budi instanceof Manager); // false
+
+        const eko = new Manager();
+        console.info(typeof eko);// object
+        console.info(eko instanceof Employee); // false
+        console.info(eko instanceof Manager); // false
+
+    </script>
+</body>
+</html>

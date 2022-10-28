@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Counter {
+            #counter = 0;
+
+            increment(){
+                this.#counter++;
+
+            }
+            decrement(){
+                this.#counter--;
+            }
+
+            get(){
+
+            return this.#counter;
+        }
+
+    }
+    const variable1 = new Counter();
+
+    variable1.increment();
+    variable1.increment();
+    variable1.increment();
+    variable1.increment();
+    variable1.increment();
+
+    console.info(variable1.get());
+    variable1.Counter = 100;
+    console.info(variable1)
+    </script>
+</body>
+</html>

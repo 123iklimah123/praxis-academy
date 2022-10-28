@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee {
+            sayHello(name) {
+                console.info(`Hello ${name}, my name is employee ${this.name}`);
+            }
+        }
+        class Manager extends Employee {
+            sayHello(name) { //jikam method ini tidak ada maka akan ambil method punya parent }
+            console.info(`Hello ${name}, my name is manager ${this.name}`);
+        }
+    }
+        const budi = new Employee();
+        budi.name="budi";
+        budi.sayHello('Joko'); 
+        console.info(budi);
+
+        const eko =new Employee();
+        eko.name = "Eko";
+        eko.sayHello('Joko');
+        console.info(eko);
+
+    </script>
+</body>
+</html>

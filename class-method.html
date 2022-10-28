@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person {
+            constructor(name) {
+                this.name;
+            }
+            sayHello(name) {
+                console.info(`Hello ${name}, my name is ${this.name}`);
+            }
+        }
+
+        const eko =new Person("Eko");
+        console.info(eko);
+        eko.sayHello('Joko');
+
+        const budi = new Person("Budi");
+        console.info(budi);
+        budi.sayHello('Joko'); //cara panggil method/function di class
+        console.info(budi.name);//cara panggil property di class
+    </script>
+</body>
+</html>

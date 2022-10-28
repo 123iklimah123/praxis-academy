@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Person {
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+            get fullName(){
+                return `${thisfirstName}, ${this.lastName}`;
+        }
+
+            set fullName(value){
+                const result = value.split(" ");
+                this.firstName = result[0];
+                this.lastName = result[1];
+            }
+        }
+
+        const eko =new Person("Eko", "Khannedy");
+        console.info(eko);
+        console.info(eko.fullName);
+
+        eko.fullName = "Budi Nugraha";
+        console.info(eko);
+
+        
+    </script>
+    </script>
+</body>
+</html>
